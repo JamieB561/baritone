@@ -1,0 +1,6386 @@
+[
+ {
+  "title": "Hotel California",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "E3",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "Wonderwall",
+  "artist": "Oasis",
+  "genre": "Rock",
+  "low": "D3",
+  "high": "B3",
+  "verified": false
+ },
+ {
+  "title": "Save Tonight",
+  "artist": "Eagle-Eye Cherry",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "With or Without You",
+  "artist": "U2",
+  "genre": "Rock",
+  "low": "B2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Fast Car",
+  "artist": "Tracy Chapman",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Chasing Cars",
+  "artist": "Snow Patrol",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Under the Bridge",
+  "artist": "Red Hot Chili Peppers",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Sweet Caroline",
+  "artist": "Neil Diamond",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ho Hey",
+  "artist": "The Lumineers",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'm Yours",
+  "artist": "Jason Mraz",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Riptide",
+  "artist": "Vance Joy",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Budapest",
+  "artist": "George Ezra",
+  "genre": "Pop",
+  "low": "E2",
+  "high": "A#3",
+  "verified": false
+ },
+ {
+  "title": "All of Me",
+  "artist": "John Legend",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Thinking Out Loud",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Some Enchanted Evening",
+  "artist": "South Pacific",
+  "genre": "Show Tunes",
+  "low": "D3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Ol' Man River",
+  "artist": "Show Boat",
+  "genre": "Show Tunes",
+  "low": "D2",
+  "high": "D#4",
+  "verified": false
+ },
+ {
+  "title": "Stars",
+  "artist": "Les Mis\u00e9rables (Javert)",
+  "genre": "Show Tunes",
+  "low": "G2",
+  "high": "F#4",
+  "verified": false
+ },
+ {
+  "title": "Luck Be a Lady",
+  "artist": "Guys and Dolls",
+  "genre": "Show Tunes",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "If I Loved You",
+  "artist": "Carousel",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Try to Remember",
+  "artist": "The Fantasticks",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "This Nearly Was Mine",
+  "artist": "South Pacific",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "The Boxer",
+  "artist": "Simon & Garfunkel",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Blowin' in the Wind",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Times They Are A-Changin'",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "House of the Rising Sun",
+  "artist": "The Animals",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Landslide",
+  "artist": "Fleetwood Mac",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fire and Rain",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Annie's Song",
+  "artist": "John Denver",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Let's Stay Together",
+  "artist": "Al Green",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Girl",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Stand By Me",
+  "artist": "Ben E. King",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ain't No Sunshine",
+  "artist": "Bill Withers",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lean on Me",
+  "artist": "Bill Withers",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "(Sittin' On) The Dock of the Bay",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Ring of Fire",
+  "artist": "Johnny Cash",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Take Me Home, Country Roads",
+  "artist": "John Denver",
+  "genre": "Country",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wagon Wheel",
+  "artist": "Old Crow Medicine Show",
+  "genre": "Country",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Friends in Low Places",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "F2",
+  "high": "A#3",
+  "verified": false
+ },
+ {
+  "title": "He Stopped Loving Her Today",
+  "artist": "George Jones",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Amarillo by Morning",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fly Me to the Moon",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "B2",
+  "high": "G4",
+  "verified": true
+ },
+ {
+  "title": "My Way",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "What a Wonderful World",
+  "artist": "Louis Armstrong",
+  "genre": "Jazz Standards",
+  "low": "F2",
+  "high": "A#3",
+  "verified": false
+ },
+ {
+  "title": "Summer Wind",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Come Fly with Me",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "E4",
+  "verified": true
+ },
+ {
+  "title": "The Way You Look Tonight",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Amazing Grace",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "How Great Thou Art",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "F2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "It Is Well with My Soul",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Great Is Thy Faithfulness",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Free Bird",
+  "artist": "Lynyrd Skynyrd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Simple Man",
+  "artist": "Lynyrd Skynyrd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Sweet Home Alabama",
+  "artist": "Lynyrd Skynyrd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Losing My Religion",
+  "artist": "R.E.M.",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Everybody Hurts",
+  "artist": "R.E.M.",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Africa",
+  "artist": "Toto",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "More Than Words",
+  "artist": "Extreme",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Iris",
+  "artist": "Goo Goo Dolls",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Wonderful Tonight",
+  "artist": "Eric Clapton",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Tears in Heaven",
+  "artist": "Eric Clapton",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Yesterday",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Let It Be",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Here Comes the Sun",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In My Life",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Space Oddity",
+  "artist": "David Bowie",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Knockin' on Heaven's Door",
+  "artist": "Bob Dylan",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Patience",
+  "artist": "Guns N' Roses",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "November Rain",
+  "artist": "Guns N' Roses",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "G4",
+  "verified": false
+ },
+ {
+  "title": "Learning to Fly",
+  "artist": "Tom Petty",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Free Fallin'",
+  "artist": "Tom Petty",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wildflowers",
+  "artist": "Tom Petty",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Time in a Bottle",
+  "artist": "Jim Croce",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Operator",
+  "artist": "Jim Croce",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Don't Stop Believin'",
+  "artist": "Journey",
+  "genre": "Rock",
+  "low": "B3",
+  "high": "C#5",
+  "verified": true
+ },
+ {
+  "title": "Bohemian Rhapsody (ballad section)",
+  "artist": "Queen",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "Piano Man",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "G4",
+  "verified": true
+ },
+ {
+  "title": "Just the Way You Are",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "She's Always a Woman",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Your Song",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A#1",
+  "high": "F#3",
+  "verified": true
+ },
+ {
+  "title": "Rocket Man",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "F2",
+  "high": "A#3",
+  "verified": true
+ },
+ {
+  "title": "Tiny Dancer",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'm Still Standing",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Vincent",
+  "artist": "Don McLean",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "American Pie",
+  "artist": "Don McLean",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Photograph",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Perfect",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Count on Me",
+  "artist": "Bruno Mars",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just the Way You Are",
+  "artist": "Bruno Mars",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "When I Was Your Man",
+  "artist": "Bruno Mars",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lucky",
+  "artist": "Jason Mraz & Colbie Caillat",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "3AM",
+  "artist": "Matchbox Twenty",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Unwell",
+  "artist": "Matchbox Twenty",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "She Will Be Loved",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "This Love",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Better Together",
+  "artist": "Jack Johnson",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Banana Pancakes",
+  "artist": "Jack Johnson",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Home",
+  "artist": "Edward Sharpe & The Magnetic Zeros",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Someone Like You",
+  "artist": "Adele (male cover key)",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Skinny Love",
+  "artist": "Bon Iver",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Will Follow You into the Dark",
+  "artist": "Death Cab for Cutie",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Sixteen Going on Seventeen",
+  "artist": "The Sound of Music",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Edelweiss",
+  "artist": "The Sound of Music",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Maria",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "G#4",
+  "verified": false
+ },
+ {
+  "title": "Tonight",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "Something's Coming",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "On the Street Where You Live",
+  "artist": "My Fair Lady",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "If Ever I Would Leave You",
+  "artist": "Camelot",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Camelot",
+  "artist": "Camelot",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Corner of the Sky",
+  "artist": "Pippin",
+  "genre": "Show Tunes",
+  "low": "G2",
+  "high": "A4",
+  "verified": false
+ },
+ {
+  "title": "Music of the Night",
+  "artist": "The Phantom of the Opera",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "A#4",
+  "verified": false
+ },
+ {
+  "title": "All I Ask of You",
+  "artist": "The Phantom of the Opera",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "The Impossible Dream",
+  "artist": "Man of La Mancha",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "G#4",
+  "verified": false
+ },
+ {
+  "title": "Being Alive",
+  "artist": "Company",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Giants in the Sky",
+  "artist": "Into the Woods",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Agony",
+  "artist": "Into the Woods",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "If I Were a Rich Man",
+  "artist": "Fiddler on the Roof",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sunrise, Sunset",
+  "artist": "Fiddler on the Roof",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Tradition",
+  "artist": "Fiddler on the Roof",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "This Is the Moment",
+  "artist": "Jekyll & Hyde",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "A#4",
+  "verified": false
+ },
+ {
+  "title": "Anthem",
+  "artist": "Chess",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "G#4",
+  "verified": false
+ },
+ {
+  "title": "One Day More",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "What I Did for Love",
+  "artist": "A Chorus Line",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ten Minutes Ago",
+  "artist": "Cinderella",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Not While I'm Around",
+  "artist": "Sweeney Todd",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wait for It",
+  "artist": "Hamilton",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Leaving on a Jet Plane",
+  "artist": "John Denver",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sunday Morning Coming Down",
+  "artist": "Kris Kristofferson",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Me and Bobby McGee",
+  "artist": "Kris Kristofferson",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "City of New Orleans",
+  "artist": "Arlo Guthrie",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "If I Had a Hammer",
+  "artist": "Pete Seeger",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Turn! Turn! Turn!",
+  "artist": "The Byrds",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Mr. Tambourine Man",
+  "artist": "The Byrds",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Sound of Silence",
+  "artist": "Simon & Garfunkel",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Scarborough Fair",
+  "artist": "Simon & Garfunkel",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Homeward Bound",
+  "artist": "Simon & Garfunkel",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "American Tune",
+  "artist": "Paul Simon",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Graceland",
+  "artist": "Paul Simon",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Cat's in the Cradle",
+  "artist": "Harry Chapin",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Taxi",
+  "artist": "Harry Chapin",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Tangled Up in Blue",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Big Yellow Taxi",
+  "artist": "Joni Mitchell (male cover key)",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Both Sides Now",
+  "artist": "Joni Mitchell (male cover key)",
+  "genre": "Folk",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ripple",
+  "artist": "Grateful Dead",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Uncle John's Band",
+  "artist": "Grateful Dead",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Teach Your Children",
+  "artist": "Crosby, Stills, Nash & Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Our House",
+  "artist": "Crosby, Stills, Nash & Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Southern Cross",
+  "artist": "Crosby, Stills & Nash",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Suzanne",
+  "artist": "Leonard Cohen",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "So Long, Marianne",
+  "artist": "Leonard Cohen",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Bird on the Wire",
+  "artist": "Leonard Cohen",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "A Change Is Gonna Come",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Cupid",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "You Send Me",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Try a Little Tenderness",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I've Been Loving You Too Long",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just My Imagination",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Papa Was a Rollin' Stone",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Ain't Too Proud to Beg",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Heard It Through the Grapevine",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "What's Going On",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Let's Get It On",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sexual Healing",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just the Two of Us",
+  "artist": "Bill Withers & Grover Washington Jr.",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Use Me",
+  "artist": "Bill Withers",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Kiss from a Rose",
+  "artist": "Seal",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "I Can't Make You Love Me",
+  "artist": "Bonnie Raitt (male cover key)",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ordinary People",
+  "artist": "John Legend",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Redemption Song",
+  "artist": "Bob Marley",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "No Woman, No Cry",
+  "artist": "Bob Marley",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Three Little Birds",
+  "artist": "Bob Marley",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Stir It Up",
+  "artist": "Bob Marley",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Georgia on My Mind",
+  "artist": "Ray Charles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hit the Road Jack",
+  "artist": "Ray Charles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I Can't Stop Loving You",
+  "artist": "Ray Charles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Feeling Good",
+  "artist": "Nina Simone (male cover key)",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "G4",
+  "verified": false
+ },
+ {
+  "title": "Always on My Mind",
+  "artist": "Willie Nelson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "On the Road Again",
+  "artist": "Willie Nelson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Blue Eyes Crying in the Rain",
+  "artist": "Willie Nelson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Folsom Prison Blues",
+  "artist": "Johnny Cash",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I Walk the Line",
+  "artist": "Johnny Cash",
+  "genre": "Country",
+  "low": "F2",
+  "high": "A#3",
+  "verified": false
+ },
+ {
+  "title": "Hurt",
+  "artist": "Johnny Cash (cover)",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Gambler",
+  "artist": "Kenny Rogers",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Islands in the Stream",
+  "artist": "Kenny Rogers & Dolly Parton",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Coward of the County",
+  "artist": "Kenny Rogers",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Chicken Fried",
+  "artist": "Zac Brown Band",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Tennessee Whiskey",
+  "artist": "Chris Stapleton",
+  "genre": "Country",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Traveller",
+  "artist": "Chris Stapleton",
+  "genre": "Country",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Whiskey and You",
+  "artist": "Chris Stapleton",
+  "genre": "Country",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Cross My Heart",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Check Yes or No",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Dance",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Unanswered Prayers",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "To Make You Feel My Love",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Forever and Ever, Amen",
+  "artist": "Randy Travis",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Should've Been a Cowboy",
+  "artist": "Toby Keith",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Achy Breaky Heart",
+  "artist": "Billy Ray Cyrus",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Callin' Baton Rouge",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Neon Moon",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Boot Scootin' Boogie",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Society",
+  "artist": "Eddie Vedder",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Unforgettable",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "L-O-V-E",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Mona Lisa",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Smile",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Someone to Watch Over Me",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "New York, New York",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "F#4",
+  "verified": true
+ },
+ {
+  "title": "I've Got You Under My Skin",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Strangers in the Night",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "That's Life",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "D3",
+  "high": "F#4",
+  "verified": true
+ },
+ {
+  "title": "The Lady Is a Tramp",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Beyond the Sea",
+  "artist": "Bobby Darin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Mack the Knife",
+  "artist": "Bobby Darin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Cheek to Cheek",
+  "artist": "Fred Astaire",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Puttin' on the Ritz",
+  "artist": "Fred Astaire",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Autumn Leaves",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Moon River",
+  "artist": "Andy Williams",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "It Had to Be You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "But Not for Me",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Cry Me a River",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "All of Me",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Ain't Misbehavin'",
+  "artist": "Fats Waller",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Blue Skies",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Nearness of You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Nature Boy",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Witchcraft",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "His Eye Is on the Sparrow",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just a Closer Walk with Thee",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I'll Fly Away",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Down by the Riverside",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Swing Low, Sweet Chariot",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "F2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Go Down Moses",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "F2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wade in the Water",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "F2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Nobody Knows the Trouble I've Seen",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "F2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Precious Lord, Take My Hand",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In the Garden",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "What a Friend We Have in Jesus",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Rock of Ages",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Nearer, My God, to Thee",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Blessed Assurance",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just as I Am",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Turn Your Eyes Upon Jesus",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Holy, Holy, Holy",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Come Thou Fount of Every Blessing",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Be Thou My Vision",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "It Is No Secret",
+  "artist": "Stuart Hamblen",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "He Touched Me",
+  "artist": "Bill Gaither",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Because He Lives",
+  "artist": "Bill & Gloria Gaither",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "How Firm a Foundation",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Softly and Tenderly",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Victory in Jesus",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Blackbird",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Hey Jude",
+  "artist": "The Beatles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Everlong",
+  "artist": "Foo Fighters",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Life on Mars?",
+  "artist": "David Bowie",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Danny's Song",
+  "artist": "Kenny Loggins",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Load-Out / Stay",
+  "artist": "Jackson Browne",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Thunder Road",
+  "artist": "Bruce Springsteen",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fields of Gold",
+  "artist": "Sting",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fragile",
+  "artist": "Sting",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Drops of Jupiter",
+  "artist": "Train",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hey There Delilah",
+  "artist": "Plain White T's",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Scientist",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "They Call the Wind Maria",
+  "artist": "Paint Your Wagon",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Younger Than Springtime",
+  "artist": "South Pacific",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Soliloquy",
+  "artist": "Carousel",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "G4",
+  "verified": false
+ },
+ {
+  "title": "Send in the Clowns",
+  "artist": "A Little Night Music (male key)",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bui Doi",
+  "artist": "Miss Saigon",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Empty Chairs at Empty Tables",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Early Morning Rain",
+  "artist": "Gordon Lightfoot",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "If You Could Read My Mind",
+  "artist": "Gordon Lightfoot",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Wreck of the Edmund Fitzgerald",
+  "artist": "Gordon Lightfoot",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Four Strong Winds",
+  "artist": "Ian & Sylvia / Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Heart of Gold",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Old Man",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Superstition",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Isn't She Lovely",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You Are the Sunshine of My Life",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I Just Called to Say I Love You",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sir Duke",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just Once",
+  "artist": "James Ingram",
+  "genre": "Soul/R&B",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Chattahoochee",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Remember When",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Where Were You (When the World Stopped Turning)",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Amazed",
+  "artist": "Lonestar",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Swear",
+  "artist": "John Michael Montgomery",
+  "genre": "Country",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Live Like You Were Dying",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Come Rain or Come Shine",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "D3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "Chances Are",
+  "artist": "Johnny Mathis",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Misty",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sway",
+  "artist": "Dean Martin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Volare",
+  "artist": "Dean Martin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Everybody Loves Somebody",
+  "artist": "Dean Martin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "That's Amore",
+  "artist": "Dean Martin",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Amazing Grace (My Chains Are Gone)",
+  "artist": "Chris Tomlin",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "How Great Is Our God",
+  "artist": "Chris Tomlin",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "10,000 Reasons (Bless the Lord)",
+  "artist": "Matt Redman",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In Christ Alone",
+  "artist": "Keith & Kristyn Getty",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Great Are You Lord",
+  "artist": "All Sons & Daughters",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Cornerstone",
+  "artist": "Hillsong",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Build My Life",
+  "artist": "Pat Barrett",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Layla (Acoustic)",
+  "artist": "Eric Clapton",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Change the World",
+  "artist": "Eric Clapton",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Father's Eyes",
+  "artist": "Eric Clapton",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Dust in the Wind",
+  "artist": "Kansas",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Carry On Wayward Son",
+  "artist": "Kansas",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Come Sail Away",
+  "artist": "Styx",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Babe",
+  "artist": "Styx",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hold the Line",
+  "artist": "Toto",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Rosanna",
+  "artist": "Toto",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'll Be There for You",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bed of Roses",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Always",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wanted Dead or Alive",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Livin' on a Prayer",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "It's My Life",
+  "artist": "Bon Jovi",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Home Sweet Home",
+  "artist": "M\u00f6tley Cr\u00fce",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Every Rose Has Its Thorn",
+  "artist": "Poison",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Remember You",
+  "artist": "Skid Row",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wind of Change",
+  "artist": "Scorpions",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Still Loving You",
+  "artist": "Scorpions",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Broken Wings",
+  "artist": "Mr. Mister",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Kyrie",
+  "artist": "Mr. Mister",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Faithfully",
+  "artist": "Journey",
+  "genre": "Rock",
+  "low": "B2",
+  "high": "B3",
+  "verified": true
+ },
+ {
+  "title": "Open Arms",
+  "artist": "Journey",
+  "genre": "Rock",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Any Way You Want It",
+  "artist": "Journey",
+  "genre": "Rock",
+  "low": "D3",
+  "high": "C5",
+  "verified": true
+ },
+ {
+  "title": "Sister Christian",
+  "artist": "Night Ranger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Heaven",
+  "artist": "Bryan Adams",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Summer of '69",
+  "artist": "Bryan Adams",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "(Everything I Do) I Do It for You",
+  "artist": "Bryan Adams",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Run to You",
+  "artist": "Bryan Adams",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hard to Handle",
+  "artist": "The Black Crowes",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "She Talks to Angels",
+  "artist": "The Black Crowes",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fly Away",
+  "artist": "Lenny Kravitz",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "American Woman",
+  "artist": "The Guess Who",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "These Eyes",
+  "artist": "The Guess Who",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Old Time Rock and Roll",
+  "artist": "Bob Seger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Night Moves",
+  "artist": "Bob Seger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Turn the Page",
+  "artist": "Bob Seger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Against the Wind",
+  "artist": "Bob Seger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Mainstreet",
+  "artist": "Bob Seger",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Behind Blue Eyes",
+  "artist": "The Who",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wish You Were Here",
+  "artist": "Pink Floyd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Time",
+  "artist": "Pink Floyd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Money",
+  "artist": "Pink Floyd",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Weight",
+  "artist": "The Band",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Up on Cripple Creek",
+  "artist": "The Band",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ophelia",
+  "artist": "The Band",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Take It Easy",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Peaceful Easy Feeling",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Desperado",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Already Gone",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Tequila Sunrise",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lyin' Eyes",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "New Kid in Town",
+  "artist": "Eagles",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Born to Run",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Dancing in the Dark",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The River",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Glory Days",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Hometown",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Streets of Philadelphia",
+  "artist": "Bruce Springsteen",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Brown Eyed Girl",
+  "artist": "Van Morrison",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Into the Mystic",
+  "artist": "Van Morrison",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Moondance",
+  "artist": "Van Morrison",
+  "genre": "Rock",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Uptown Girl",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Movin' Out (Anthony's Song)",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Life",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Honesty",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "A#2",
+  "high": "A4",
+  "verified": true
+ },
+ {
+  "title": "Daniel",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Candle in the Wind",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A1",
+  "high": "A3",
+  "verified": true
+ },
+ {
+  "title": "Sacrifice",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sorry Seems to Be the Hardest Word",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Levon",
+  "artist": "Elton John",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hallelujah",
+  "artist": "Jeff Buckley",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "All I Want",
+  "artist": "Kodaline",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "High Hopes",
+  "artist": "Kodaline",
+  "genre": "Pop",
+  "low": "F2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Say Something",
+  "artist": "A Great Big World",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'm Not the Only One",
+  "artist": "Sam Smith",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Demons",
+  "artist": "Imagine Dragons",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Believer",
+  "artist": "Imagine Dragons",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Radioactive",
+  "artist": "Imagine Dragons",
+  "genre": "Pop",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Thunder",
+  "artist": "Imagine Dragons",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Counting Stars",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Apologize",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Secrets",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Good Life",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "If I Lose Myself",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Lived",
+  "artist": "OneRepublic",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Marry Me",
+  "artist": "Train",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hey, Soul Sister",
+  "artist": "Train",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Drive By",
+  "artist": "Train",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Shape of You",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Castle on the Hill",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Give Me Love",
+  "artist": "Ed Sheeran",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Little Talks",
+  "artist": "Of Monsters and Men",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Rivers and Roads",
+  "artist": "The Head and the Heart",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Collide",
+  "artist": "Howie Day",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sunday Morning",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sugar",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Daylight",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Payphone",
+  "artist": "Maroon 5",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bittersweet Symphony",
+  "artist": "The Verve",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Yellow",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fix You",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Viva la Vida",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In My Place",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Trouble",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Man Who Can't Be Moved",
+  "artist": "The Script",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Breakeven",
+  "artist": "The Script",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hall of Fame",
+  "artist": "The Script",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Feel It Still",
+  "artist": "Portugal. The Man",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Angels",
+  "artist": "Robbie Williams",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Feel",
+  "artist": "Robbie Williams",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "She's the One",
+  "artist": "Robbie Williams",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Somewhere Only We Know",
+  "artist": "Keane",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "A Thousand Years",
+  "artist": "Christina Perri (male cover key)",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Grenade",
+  "artist": "Bruno Mars",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Talking to the Moon",
+  "artist": "Bruno Mars",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wake Me Up",
+  "artist": "Avicii",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Hey Brother",
+  "artist": "Avicii",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Nights",
+  "artist": "Avicii",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Stitches",
+  "artist": "Shawn Mendes",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Mercy",
+  "artist": "Shawn Mendes",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Treat You Better",
+  "artist": "Shawn Mendes",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "There's Nothing Holdin' Me Back",
+  "artist": "Shawn Mendes",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Vienna",
+  "artist": "Billy Joel",
+  "genre": "Pop",
+  "low": "D#3",
+  "high": "G4",
+  "verified": true
+ },
+ {
+  "title": "A Sky Full of Stars",
+  "artist": "Coldplay",
+  "genre": "Pop",
+  "low": "A2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Seasons of Love",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "One Song Glory",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Santa Fe",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'll Cover You",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Suddenly Seymour",
+  "artist": "Little Shop of Horrors",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Grow for Me",
+  "artist": "Little Shop of Horrors",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Skid Row (Downtown)",
+  "artist": "Little Shop of Horrors",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Til There Was You",
+  "artist": "The Music Man",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ya Got Trouble",
+  "artist": "The Music Man",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "If I Can't Love Her",
+  "artist": "Beauty and the Beast",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Gaston",
+  "artist": "Beauty and the Beast",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Circle of Life",
+  "artist": "The Lion King",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Can You Feel the Love Tonight",
+  "artist": "The Lion King",
+  "genre": "Show Tunes",
+  "low": "G2",
+  "high": "G3",
+  "verified": true
+ },
+ {
+  "title": "He Lives in You",
+  "artist": "The Lion King",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "A Million Dreams",
+  "artist": "The Greatest Showman",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "From Now On",
+  "artist": "The Greatest Showman",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Other Side",
+  "artist": "The Greatest Showman",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Waving Through a Window",
+  "artist": "Dear Evan Hansen",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "For Forever",
+  "artist": "Dear Evan Hansen",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sincerely, Me",
+  "artist": "Dear Evan Hansen",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You Will Be Found",
+  "artist": "Dear Evan Hansen",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Confrontation",
+  "artist": "Jekyll & Hyde",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Who Am I?",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Javert's Suicide",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "Master of the House",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Dog Eat Dog",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Confrontation",
+  "artist": "Les Mis\u00e9rables",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "What Kind of Fool Am I",
+  "artist": "Stop the World, I Want to Get Off",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Consider Yourself",
+  "artist": "Oliver!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Reviewing the Situation",
+  "artist": "Oliver!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "There Is Nothin' Like a Dame",
+  "artist": "South Pacific",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Do You Love Me?",
+  "artist": "Fiddler on the Roof",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "To Life (L'Chaim)",
+  "artist": "Fiddler on the Roof",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Impossible",
+  "artist": "Cinderella",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "If I Only Had a Brain",
+  "artist": "The Wizard of Oz",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Make 'Em Laugh",
+  "artist": "Singin' in the Rain",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Good Morning",
+  "artist": "Singin' in the Rain",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Singin' in the Rain",
+  "artist": "Singin' in the Rain",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Brotherhood of Man",
+  "artist": "How to Succeed in Business Without Really Trying",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Believe in You",
+  "artist": "How to Succeed in Business Without Really Trying",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Old Devil Moon",
+  "artist": "Finian's Rainbow",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sit Down You're Rockin' the Boat",
+  "artist": "Guys and Dolls",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Guys and Dolls",
+  "artist": "Guys and Dolls",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I've Never Been in Love Before",
+  "artist": "Guys and Dolls",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Oh, What a Beautiful Mornin'",
+  "artist": "Oklahoma!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Surrey with the Fringe on Top",
+  "artist": "Oklahoma!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "People Will Say We're in Love",
+  "artist": "Oklahoma!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Poor Jud is Daid",
+  "artist": "Oklahoma!",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "This Can't Be Love",
+  "artist": "The Boys from Syracuse",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "It's a Grand Night for Singing",
+  "artist": "State Fair",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You'll Never Walk Alone",
+  "artist": "Carousel",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "A Puzzlement",
+  "artist": "The King and I",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Shall We Dance",
+  "artist": "The King and I",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Comedy Tonight",
+  "artist": "A Funny Thing Happened on the Way to the Forum",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Free",
+  "artist": "A Funny Thing Happened on the Way to the Forum",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Gee, Officer Krupke",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Cool",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Jet Song",
+  "artist": "West Side Story",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Rock Island",
+  "artist": "The Music Man",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Wells Fargo Wagon",
+  "artist": "The Music Man",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Without You",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "What You Own",
+  "artist": "Rent",
+  "genre": "Show Tunes",
+  "low": "C3",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Pancho and Lefty",
+  "artist": "Townes Van Zandt",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "If I Needed You",
+  "artist": "Townes Van Zandt",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Tecumseh Valley",
+  "artist": "Townes Van Zandt",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "To Ramona",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Don't Think Twice, It's All Right",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Girl from the North Country",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Forever Young",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Shelter from the Storm",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Simple Twist of Fate",
+  "artist": "Bob Dylan",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Water Is Wide",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wayfaring Stranger",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Shenandoah",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Down in the Valley",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Tom Dooley",
+  "artist": "The Kingston Trio",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Where Have All the Flowers Gone",
+  "artist": "Pete Seeger",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "This Land Is Your Land",
+  "artist": "Woody Guthrie",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Universal Soldier",
+  "artist": "Buffy Sainte-Marie (male cover key)",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Harvest Moon",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Ohio",
+  "artist": "Crosby, Stills, Nash & Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Helplessly Hoping",
+  "artist": "Crosby, Stills & Nash",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Guinnevere",
+  "artist": "Crosby, Stills & Nash",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wooden Ships",
+  "artist": "Crosby, Stills & Nash",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Long Time Gone",
+  "artist": "Crosby, Stills & Nash",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Norwegian Wood",
+  "artist": "The Beatles",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Circle Game",
+  "artist": "Tom Rush",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Urge for Going",
+  "artist": "Tom Rush",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "No Regrets",
+  "artist": "Tom Rush",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Comes a Time",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Only Love Can Break Your Heart",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Needle and the Damage Done",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "After the Gold Rush",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Helpless",
+  "artist": "Neil Young",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "King of the Road",
+  "artist": "Roger Miller",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Dang Me",
+  "artist": "Roger Miller",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Little Green Apples",
+  "artist": "Roger Miller",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Gentle on My Mind",
+  "artist": "Glen Campbell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wichita Lineman",
+  "artist": "Glen Campbell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "By the Time I Get to Phoenix",
+  "artist": "Glen Campbell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Rhinestone Cowboy",
+  "artist": "Glen Campbell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Southern Nights",
+  "artist": "Glen Campbell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Puff, the Magic Dragon",
+  "artist": "Peter, Paul and Mary",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "500 Miles",
+  "artist": "Peter, Paul and Mary",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Lemon Tree",
+  "artist": "Peter, Paul and Mary",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Kumbaya",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Streets of London",
+  "artist": "Ralph McTell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "You've Got a Friend",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Sweet Baby James",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Carolina in My Mind",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Country Road",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Shower the People",
+  "artist": "James Taylor",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Diamonds & Rust",
+  "artist": "Joan Baez (male cover key)",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Night They Drove Old Dixie Down",
+  "artist": "The Band",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "It Makes No Difference",
+  "artist": "The Band",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Acadian Driftwood",
+  "artist": "The Band",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Fare Thee Well (Dink's Song)",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Man of Constant Sorrow",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Angel Band",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wildwood Flower",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Will the Circle Be Unbroken",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Keep on the Sunny Side",
+  "artist": "The Carter Family",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Long Black Veil",
+  "artist": "Lefty Frizzell",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Big Rock Candy Mountain",
+  "artist": "Traditional",
+  "genre": "Folk",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "My Cherie Amour",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "For Once in My Life",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Higher Ground",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Signed, Sealed, Delivered I'm Yours",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ribbon in the Sky",
+  "artist": "Stevie Wonder",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ain't No Mountain High Enough",
+  "artist": "Marvin Gaye & Tammi Terrell",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You're All I Need to Get By",
+  "artist": "Marvin Gaye & Tammi Terrell",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Mercy Mercy Me (The Ecology)",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Inner City Blues",
+  "artist": "Marvin Gaye",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Way You Do the Things You Do",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Get Ready",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Wish It Would Rain",
+  "artist": "The Temptations",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Can't Help Myself (Sugar Pie Honey Bunch)",
+  "artist": "Four Tops",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Reach Out I'll Be There",
+  "artist": "Four Tops",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bernadette",
+  "artist": "Four Tops",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Baby I Need Your Loving",
+  "artist": "Four Tops",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Tracks of My Tears",
+  "artist": "Smokey Robinson & The Miracles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ooo Baby Baby",
+  "artist": "Smokey Robinson & The Miracles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Second That Emotion",
+  "artist": "Smokey Robinson & The Miracles",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Being with You",
+  "artist": "Smokey Robinson",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Cruisin'",
+  "artist": "Smokey Robinson",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "These Arms of Mine",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Respect",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Mr. Pitiful",
+  "artist": "Otis Redding",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wonderful World",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bring It On Home to Me",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Twistin' the Night Away",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Chain Gang",
+  "artist": "Sam Cooke",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Tired of Being Alone",
+  "artist": "Al Green",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Love and Happiness",
+  "artist": "Al Green",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Simply Beautiful",
+  "artist": "Al Green",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "If Only for One Night",
+  "artist": "Luther Vandross",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Here and Now",
+  "artist": "Luther Vandross",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Dance with My Father",
+  "artist": "Luther Vandross",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "A House Is Not a Home",
+  "artist": "Luther Vandross",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Never Too Much",
+  "artist": "Luther Vandross",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lovely Day",
+  "artist": "Bill Withers",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Grandma's Hands",
+  "artist": "Bill Withers",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "(Your Love Keeps Lifting Me) Higher and Higher",
+  "artist": "Jackie Wilson",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lonely Teardrops",
+  "artist": "Jackie Wilson",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "To Be Loved",
+  "artist": "Jackie Wilson",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Betcha By Golly, Wow",
+  "artist": "The Stylistics",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You Are Everything",
+  "artist": "The Stylistics",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Backstabbers",
+  "artist": "The O'Jays",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Love Train",
+  "artist": "The O'Jays",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "For the Love of Money",
+  "artist": "The O'Jays",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "If You Don't Know Me by Now",
+  "artist": "Harold Melvin & the Blue Notes",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wake Up Everybody",
+  "artist": "Harold Melvin & the Blue Notes",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Me and Mrs. Jones",
+  "artist": "Billy Paul",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Kiss and Say Goodbye",
+  "artist": "The Manhattans",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Shining Star",
+  "artist": "Earth, Wind & Fire",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "September",
+  "artist": "Earth, Wind & Fire",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Reasons",
+  "artist": "Earth, Wind & Fire",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "After the Love Has Gone",
+  "artist": "Earth, Wind & Fire",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Let's Groove",
+  "artist": "Earth, Wind & Fire",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I'll Be Around",
+  "artist": "The Spinners",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Could It Be I'm Falling in Love",
+  "artist": "The Spinners",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Rubberband Man",
+  "artist": "The Spinners",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Easy",
+  "artist": "Commodores",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Three Times a Lady",
+  "artist": "Commodores",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Nightshift",
+  "artist": "Commodores",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just to Be Close to You",
+  "artist": "Commodores",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Sail On",
+  "artist": "Commodores",
+  "genre": "Soul/R&B",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "El Paso",
+  "artist": "Marty Robbins",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Big Iron",
+  "artist": "Marty Robbins",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Devil Woman",
+  "artist": "Marty Robbins",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Behind Closed Doors",
+  "artist": "Charlie Rich",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Most Beautiful Girl",
+  "artist": "Charlie Rich",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "He'll Have to Go",
+  "artist": "Jim Reeves",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Four Walls",
+  "artist": "Jim Reeves",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Welcome to My World",
+  "artist": "Jim Reeves",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Crazy",
+  "artist": "Patsy Cline (male cover key)",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I Fall to Pieces",
+  "artist": "Patsy Cline (male cover key)",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Your Cheatin' Heart",
+  "artist": "Hank Williams",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "I'm So Lonesome I Could Cry",
+  "artist": "Hank Williams",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Hey Good Lookin'",
+  "artist": "Hank Williams",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Jambalaya (On the Bayou)",
+  "artist": "Hank Williams",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Cold, Cold Heart",
+  "artist": "Hank Williams",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "A Boy Named Sue",
+  "artist": "Johnny Cash",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Man in Black",
+  "artist": "Johnny Cash",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Jackson",
+  "artist": "Johnny Cash & June Carter",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Rocky Top",
+  "artist": "The Osborne Brothers",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "All My Ex's Live in Texas",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Ocean Front Property",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "The Chair",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Love Without End, Amen",
+  "artist": "George Strait",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Don't Rock the Jukebox",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Gone Country",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Little Bitty",
+  "artist": "Alan Jackson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "It's Five O'Clock Somewhere",
+  "artist": "Alan Jackson & Jimmy Buffett",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Margaritaville",
+  "artist": "Jimmy Buffett",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Come Monday",
+  "artist": "Jimmy Buffett",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Cheeseburger in Paradise",
+  "artist": "Jimmy Buffett",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Amie",
+  "artist": "Pure Prairie League",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Longer",
+  "artist": "Dan Fogelberg",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Leader of the Band",
+  "artist": "Dan Fogelberg",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Same Old Lang Syne",
+  "artist": "Dan Fogelberg",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Elvira",
+  "artist": "The Oak Ridge Boys",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Bobbie Sue",
+  "artist": "The Oak Ridge Boys",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Fishin' in the Dark",
+  "artist": "Nitty Gritty Dirt Band",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Riding with Private Malone",
+  "artist": "David Ball",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "She's Every Woman",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Standing Outside the Fire",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Much Too Young (to Feel This Damn Old)",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "If Tomorrow Never Comes",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Wrapped Up in You",
+  "artist": "Garth Brooks",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "My Maria",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Red Dirt Road",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Believe",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Only in America",
+  "artist": "Brooks & Dunn",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Amarillo Sky",
+  "artist": "Jason Aldean",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Big Green Tractor",
+  "artist": "Jason Aldean",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Dirt Road Anthem",
+  "artist": "Jason Aldean",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Beer for My Horses",
+  "artist": "Toby Keith & Willie Nelson",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "How Do You Like Me Now?!",
+  "artist": "Toby Keith",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Courtesy of the Red, White and Blue",
+  "artist": "Toby Keith",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Where the Green Grass Grows",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Don't Take the Girl",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Indian Outlaw",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "It's Your Love",
+  "artist": "Tim McGraw & Faith Hill",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Something Like That",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Real Good Man",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Just to See You Smile",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Highway Don't Care",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "Humble and Kind",
+  "artist": "Tim McGraw",
+  "genre": "Country",
+  "low": "G2",
+  "high": "C4",
+  "verified": false
+ },
+ {
+  "title": "My Funny Valentine",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "F#2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Blue Moon",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Route 66",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Straighten Up and Fly Right",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Orange Colored Sky",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Stardust",
+  "artist": "Hoagy Carmichael",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Skylark",
+  "artist": "Hoagy Carmichael",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Very Thought of You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I've Got the World on a String",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "C4",
+  "verified": true
+ },
+ {
+  "title": "Come Dance with Me",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "B2",
+  "high": "D#4",
+  "verified": true
+ },
+ {
+  "title": "It Was a Very Good Year",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "C4",
+  "verified": true
+ },
+ {
+  "title": "All the Way",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G#2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Young at Heart",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "B2",
+  "high": "C#4",
+  "verified": true
+ },
+ {
+  "title": "Nice 'n' Easy",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "The Best Is Yet to Come",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Night and Day",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "I Get a Kick Out of You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Let's Fall in Love",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Just One of Those Things",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In the Still of the Night",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "Almost Like Being in Love",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "On a Clear Day (You Can See Forever)",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "April in Paris",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Summertime",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Got Rhythm",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "'S Wonderful",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "They Can't Take That Away from Me",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Embraceable You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Isn't It Romantic",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Romance",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "E4",
+  "verified": true
+ },
+ {
+  "title": "Where or When",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bewitched, Bothered and Bewildered",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "It Never Entered My Mind",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Days of Wine and Roses",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "A Nightingale Sang in Berkeley Square",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Time After Time",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G#2",
+  "high": "C#4",
+  "verified": true
+ },
+ {
+  "title": "Autumn in New York",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "September Song",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "F3",
+  "high": "G#4",
+  "verified": true
+ },
+ {
+  "title": "Speak Low",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lullaby of Birdland",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "How High the Moon",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Tenderly",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Dream a Little Dream of Me",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "It's Only a Paper Moon",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Pennies from Heaven",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Let There Be Love",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "When I Fall in Love",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ramblin' Rose",
+  "artist": "Nat King Cole",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Too Marvelous for Words",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "What'll I Do",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "All of You",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "You'd Be So Nice to Come Home To",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Fascinating Rhythm",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Somebody Loves Me",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Chicago (That Toddlin' Town)",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "D3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "South of the Border",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "The Coffee Song",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "E4",
+  "verified": true
+ },
+ {
+  "title": "Learnin' the Blues",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "C3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "My Kind of Town",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "D3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "Love and Marriage",
+  "artist": "Frank Sinatra",
+  "genre": "Jazz Standards",
+  "low": "A2",
+  "high": "D4",
+  "verified": true
+ },
+ {
+  "title": "Moonlight in Vermont",
+  "artist": "Jazz Standard",
+  "genre": "Jazz Standards",
+  "low": "C#3",
+  "high": "F4",
+  "verified": true
+ },
+ {
+  "title": "Way Maker",
+  "artist": "Sinach / Leeland",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Goodness of God",
+  "artist": "Bethel Music",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Reckless Love",
+  "artist": "Cory Asbury",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "What a Beautiful Name",
+  "artist": "Hillsong Worship",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "King of My Heart",
+  "artist": "John Mark McMillan",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Living Hope",
+  "artist": "Phil Wickham",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "This Is Amazing Grace",
+  "artist": "Phil Wickham",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Oceans (Where Feet May Fail)",
+  "artist": "Hillsong United",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Here I Am to Worship",
+  "artist": "Tim Hughes",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Our God",
+  "artist": "Chris Tomlin",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Indescribable",
+  "artist": "Chris Tomlin",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "How He Loves",
+  "artist": "David Crowder Band",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Blessed Be Your Name",
+  "artist": "Matt Redman",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Holy Spirit",
+  "artist": "Bryan & Katie Torwalt",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lord I Need You",
+  "artist": "Matt Maher",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Christ Be Magnified",
+  "artist": "Cody Carnes",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Graves into Gardens",
+  "artist": "Elevation Worship",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "E4",
+  "verified": false
+ },
+ {
+  "title": "Raise a Hallelujah",
+  "artist": "Bethel Music",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "F4",
+  "verified": false
+ },
+ {
+  "title": "No Longer Slaves",
+  "artist": "Bethel Music",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Total Praise",
+  "artist": "Richard Smallwood",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Won't Complain",
+  "artist": "Traditional Gospel",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Order My Steps",
+  "artist": "Traditional Gospel",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Need You to Survive",
+  "artist": "Hezekiah Walker",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Oh Happy Day",
+  "artist": "Edwin Hawkins Singers",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Every Praise",
+  "artist": "Hezekiah Walker",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Jesus Loves Me",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Trust and Obey",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Leaning on the Everlasting Arms",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "When the Roll Is Called Up Yonder",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Standing on the Promises",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Great Is the Lord",
+  "artist": "Michael W. Smith",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Friends",
+  "artist": "Michael W. Smith",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Above All",
+  "artist": "Michael W. Smith",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Shout to the Lord",
+  "artist": "Darlene Zschech (male cover key)",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Days of Elijah",
+  "artist": "Robin Mark",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Ancient of Days",
+  "artist": "Jesus Culture",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Forever (We Sing Hallelujah)",
+  "artist": "Kari Jobe (male cover key)",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Lord, I Lift Your Name on High",
+  "artist": "Rick Founds",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "As the Deer",
+  "artist": "Martin Nystrom",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Give Thanks",
+  "artist": "Don Moen",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Exalt Thee",
+  "artist": "Traditional Praise",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Majesty",
+  "artist": "Jack Hayford",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "There's Something About That Name",
+  "artist": "Bill & Gloria Gaither",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "He Is Lord",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Bind Us Together",
+  "artist": "Bob Gillman",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Tribute (To God Be the Glory)",
+  "artist": "Andra\u00e9 Crouch",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Soon and Very Soon",
+  "artist": "Andra\u00e9 Crouch",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Through It All",
+  "artist": "Andra\u00e9 Crouch",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Jesus Is the Answer",
+  "artist": "Andra\u00e9 Crouch",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Farther Along",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "In the Sweet By and By",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "When We All Get to Heaven",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "I Surrender All",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Draw Me Nearer (I Am Thine, O Lord)",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Blessed Quietness",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Jesus Paid It All",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Nothing But the Blood",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "There Is Power in the Blood",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "My Faith Has Found a Resting Place",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wonderful Grace of Jesus",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Blessed Redeemer",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ },
+ {
+  "title": "Wonderful Words of Life",
+  "artist": "Traditional",
+  "genre": "Gospel",
+  "low": "G2",
+  "high": "D4",
+  "verified": false
+ }
+]

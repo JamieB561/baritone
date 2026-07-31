@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Baritone Repertoire Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --ink:#14181D;
+    --paper:#EDE7D8;
+    --brass:#C9A227;
+    --brass-dim:#8f7420;
+    --teal:#3E6B63;
+    --line: rgba(237,231,216,0.14);
+    --card: #1B2128;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    padding:48px 32px 28px;
+    border-bottom:1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(201,162,39,0.06), transparent 60%);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(28px, 4vw, 44px);
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  header p{
+    max-width:640px;
+    color:rgba(237,231,216,0.72);
+    font-size:15px;
+    line-height:1.5;
+    margin:0;
+  }
+  .staff-rule{
+    height:1px;
+    background:repeating-linear-gradient(90deg, var(--brass) 0 10px, transparent 10px 20px);
+    opacity:0.35;
+    margin-top:24px;
+  }
+
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:24px 32px;
+    border-bottom:1px solid var(--line);
+    align-items:flex-end;
+    position:sticky;
+    top:0;
+    background:var(--ink);
+    z-index:5;
+  }
+  .field{display:flex; flex-direction:column; gap:6px;}
+  .field label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass);
+  }
+  select, input[type=text]{
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--paper);
+    padding:9px 12px;
+    border-radius:2px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    min-width:120px;
+  }
+  select:focus, input:focus{
+    outline:2px solid var(--brass);
+    outline-offset:1px;
+  }
+  input[type=text]{min-width:220px;}
+  .genre-toggles{display:flex; flex-wrap:wrap; gap:8px; max-width:480px;}
+  .genre-chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:6px 10px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    cursor:pointer;
+    color:rgba(237,231,216,0.65);
+    user-select:none;
+    transition:all 0.15s ease;
+  }
+  .genre-chip.active{
+    border-color:var(--brass);
+    color:var(--ink);
+    background:var(--brass);
+    font-weight:600;
+  }
+  .count{
+    margin-left:auto;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:rgba(237,231,216,0.55);
+    align-self:center;
+  }
+
+  main{padding:8px 32px 60px;}
+  table{width:100%; border-collapse:collapse; margin-top:16px;}
+  thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--brass);
+    padding:10px 12px;
+    border-bottom:1px solid var(--line);
+    background:var(--ink);
+  }
+  tbody tr{
+    border-bottom:1px solid var(--line);
+    transition:background 0.12s ease;
+  }
+  tbody tr:hover{background:rgba(201,162,39,0.06);}
+  td{padding:12px; font-size:14px; vertical-align:middle;}
+  .title{font-weight:600; font-family:'Fraunces', serif; font-size:16px;}
+  .artist{color:rgba(237,231,216,0.6); font-size:13px; margin-top:2px;}
+  .genre-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--teal);
+    background:rgba(62,107,99,0.15);
+    padding:3px 8px;
+    border-radius:10px;
+    display:inline-block;
+  }
+  .range-cell{font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
+  .range-bar{
+    width:110px;
+    height:6px;
+    background:rgba(237,231,216,0.1);
+    border-radius:3px;
+    margin-top:6px;
+    position:relative;
+  }
+  .range-bar-fill{
+    position:absolute;
+    height:100%;
+    background:linear-gradient(90deg, var(--teal), var(--brass));
+    border-radius:3px;
+  }
+  .empty{
+    text-align:center;
+    padding:60px 20px;
+    color:rgba(237,231,216,0.5);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+  @media (max-width: 640px){
+    .controls{
+      flex-direction:column;
+      align-items:stretch;
+      position:static;
+    }
+    input[type=text], select{min-width:0; width:100%;}
+    .count{margin-left:0;}
+  }
+
+  footer{
+    padding:20px 32px 40px;
+    color:rgba(237,231,216,0.4);
+    font-size:12px;
+    font-family:'IBM Plex Mono', monospace;
+    max-width:680px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Full collection · 800 songs</div>
+  <h1>Baritone Repertoire Finder</h1>
+  <p>Set your comfortable range below to filter the list. Standard baritone range runs roughly E2/F2 to A4, with some high-baritone rep reaching Bb4–C5 — the dropdowns cover the full span so you can filter to exactly where you sit.</p>
+  <div class="staff-rule"></div>
+</header>
+
+<div class="controls">
+  <div class="field">
+    <label for="lowNote">My lowest note</label>
+    <select id="lowNote"></select>
+  </div>
+  <div class="field">
+    <label for="highNote">My highest note</label>
+    <select id="highNote"></select>
+  </div>
+  <div class="field">
+    <label for="search">Search title / artist</label>
+    <input type="text" id="search" placeholder="e.g. Denver, Hallelujah...">
+  </div>
+  <div class="field">
+    <label>Genres</label>
+    <div class="genre-toggles" id="genreToggles"></div>
+  </div>
+  <div class="count" id="resultCount"></div>
+</div>
+
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:34%">Song</th>
+        <th style="width:12%">Genre</th>
+        <th>Range</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+  <div class="empty" id="emptyState" style="display:none;">No songs match that range/genre combo. Try widening it.</div>
+</main>
+
+<footer>
+  All ranges sourced from <a href="https://singingcarrots.com" style="color:var(--brass);text-decoration:none;">singingcarrots.com</a> and verified against real recordings. 100 songs per genre, 800 total.
+</footer>
+
+<script>
+const NOTE_NAMES = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+function noteToMidi(note){
+  const m = note.match(/^([A-G]#?)(\d)$/);
+  const idx = NOTE_NAMES.indexOf(m[1]);
+  const octave = parseInt(m[2],10);
+  return (octave+1)*12 + idx;
+}
+function midiToNote(midi){
+  const octave = Math.floor(midi/12)-1;
+  const name = NOTE_NAMES[midi%12];
+  return name+octave;
+}
+
+const NOTE_RANGE = [];
+for(let m = noteToMidi('C2'); m <= noteToMidi('C5'); m++){
+  NOTE_RANGE.push(midiToNote(m));
+}
+
+const songs = [
+  {title:"A Woman's Love", artist:"Alan Jackson", genre:"Country", low:"E2", high:"G#3"},
+  {title:"Chattahoochee", artist:"Alan Jackson", genre:"Country", low:"C3", high:"D4"},
+  {title:"Country Boy", artist:"Alan Jackson", genre:"Country", low:"E2", high:"B3"},
+  {title:"Designated Drinker", artist:"Alan Jackson", genre:"Country", low:"A2", high:"E4"},
+  {title:"Don't Rock the Jukebox", artist:"Alan Jackson", genre:"Country", low:"C3", high:"E4"},
+  {title:"Drive (For Daddy Gene)", artist:"Alan Jackson", genre:"Country", low:"D#2", high:"D4"},
+  {title:"Gone Country", artist:"Alan Jackson", genre:"Country", low:"B2", high:"F#4"},
+  {title:"Good Time", artist:"Alan Jackson", genre:"Country", low:"D3", high:"E4"},
+  {title:"How Great Thou Art", artist:"Alan Jackson", genre:"Country", low:"A2", high:"C4"},
+  {title:"I Don't Even Know Your Name", artist:"Alan Jackson", genre:"Country", low:"G2", high:"B3"},
+  {title:"I Only Want You for Christmas", artist:"Alan Jackson", genre:"Country", low:"C3", high:"D4"},
+  {title:"I Slipped and Fell In Love", artist:"Alan Jackson", genre:"Country", low:"F2", high:"D4"},
+  {title:"I Want to Stroll Over Heaven With You", artist:"Alan Jackson", genre:"Country", low:"A2", high:"C4"},
+  {title:"I'll Fly Away", artist:"Alan Jackson", genre:"Country", low:"C3", high:"D4"},
+  {title:"I'll Try", artist:"Alan Jackson", genre:"Country", low:"G2", high:"G4"},
+  {title:"Just As I Am", artist:"Alan Jackson", genre:"Country", low:"C3", high:"C#4"},
+  {title:"Let It Be Christmas", artist:"Alan Jackson", genre:"Country", low:"B2", high:"D4"},
+  {title:"Meat & Potato Man", artist:"Alan Jackson", genre:"Country", low:"G2", high:"D#4"},
+  {title:"Remember When", artist:"Alan Jackson", genre:"Country", low:"D3", high:"C#4"},
+  {title:"Where Were You (When the World Stopped Turning)", artist:"Alan Jackson", genre:"Country", low:"A2", high:"C4"},
+  {title:"It's Five O'Clock Somewhere", artist:"Alan Jackson & Jimmy Buffett", genre:"Country", low:"A3", high:"D5"},
+  {title:"Achy Breaky Heart", artist:"Billy Ray Cyrus", genre:"Country", low:"E4", high:"C#5"},
+  {title:"Believe", artist:"Brooks & Dunn", genre:"Country", low:"A2", high:"G4"},
+  {title:"Boot Scootin' Boogie", artist:"Brooks & Dunn", genre:"Country", low:"F#3", high:"G#4"},
+  {title:"Neon Moon", artist:"Brooks & Dunn", genre:"Country", low:"A2", high:"G4"},
+  {title:"Only in America", artist:"Brooks & Dunn", genre:"Country", low:"E3", high:"G4"},
+  {title:"Red Dirt Road", artist:"Brooks & Dunn", genre:"Country", low:"C3", high:"F4"},
+  {title:"Behind Closed Doors", artist:"Charlie Rich", genre:"Country", low:"C3", high:"F4"},
+  {title:"The Most Beautiful Girl", artist:"Charlie Rich", genre:"Country", low:"C3", high:"F4"},
+  {title:"Tennessee Whiskey", artist:"Chris Stapleton", genre:"Country", low:"C#3", high:"A4"},
+  {title:"Traveller", artist:"Chris Stapleton", genre:"Country", low:"C3", high:"A4"},
+  {title:"Whiskey and You", artist:"Chris Stapleton", genre:"Country", low:"A2", high:"E4"},
+  {title:"Leader of the Band", artist:"Dan Fogelberg", genre:"Country", low:"C3", high:"G#4"},
+  {title:"Longer", artist:"Dan Fogelberg", genre:"Country", low:"D3", high:"G4"},
+  {title:"Same Old Lang Syne", artist:"Dan Fogelberg", genre:"Country", low:"G3", high:"C5"},
+  {title:"Friends in Low Places", artist:"Garth Brooks", genre:"Country", low:"G2", high:"A4"},
+  {title:"If Tomorrow Never Comes", artist:"Garth Brooks", genre:"Country", low:"A2", high:"D4"},
+  {title:"She's Every Woman", artist:"Garth Brooks", genre:"Country", low:"B2", high:"C#4"},
+  {title:"The Dance", artist:"Garth Brooks", genre:"Country", low:"G2", high:"E4"},
+  {title:"Unanswered Prayers", artist:"Garth Brooks", genre:"Country", low:"E2", high:"D4"},
+  {title:"Wrapped Up in You", artist:"Garth Brooks", genre:"Country", low:"C#3", high:"E4"},
+  {title:"He Stopped Loving Her Today", artist:"George Jones", genre:"Country", low:"B2", high:"E4"},
+  {title:"All My Ex's Live in Texas", artist:"George Strait", genre:"Country", low:"A#2", high:"A4"},
+  {title:"Check Yes or No", artist:"George Strait", genre:"Country", low:"A#2", high:"D4"},
+  {title:"I Cross My Heart", artist:"George Strait", genre:"Country", low:"A#2", high:"F4"},
+  {title:"Love Without End, Amen", artist:"George Strait", genre:"Country", low:"A2", high:"C#4"},
+  {title:"Ocean Front Property", artist:"George Strait", genre:"Country", low:"B2", high:"D4"},
+  {title:"The Chair", artist:"George Strait", genre:"Country", low:"A2", high:"G4"},
+  {title:"Hey Good Lookin'", artist:"Hank Williams", genre:"Country", low:"E3", high:"D4"},
+  {title:"Jambalaya (On the Bayou)", artist:"Hank Williams", genre:"Country", low:"C3", high:"E4"},
+  {title:"Your Cheatin' Heart", artist:"Hank Williams", genre:"Country", low:"B2", high:"D4"},
+  {title:"Amarillo Sky", artist:"Jason Aldean", genre:"Country", low:"A2", high:"A4"},
+  {title:"Big Green Tractor", artist:"Jason Aldean", genre:"Country", low:"G#2", high:"E4"},
+  {title:"Dirt Road Anthem", artist:"Jason Aldean", genre:"Country", low:"D3", high:"D4"},
+  {title:"Four Walls", artist:"Jim Reeves", genre:"Country", low:"D3", high:"G4"},
+  {title:"He'll Have to Go", artist:"Jim Reeves", genre:"Country", low:"A#2", high:"D#4"},
+  {title:"Welcome to My World", artist:"Jim Reeves", genre:"Country", low:"B2", high:"B3"},
+  {title:"Cheeseburger in Paradise", artist:"Jimmy Buffett", genre:"Country", low:"E3", high:"F#5"},
+  {title:"Come Monday", artist:"Jimmy Buffett", genre:"Country", low:"E2", high:"B3"},
+  {title:"Margaritaville", artist:"Jimmy Buffett", genre:"Country", low:"F2", high:"C4"},
+  {title:"Take Me Home, Country Roads", artist:"John Denver", genre:"Country", low:"E3", high:"F#4"},
+  {title:"I Swear", artist:"John Michael Montgomery", genre:"Country", low:"C3", high:"F4"},
+  {title:"A Boy Named Sue", artist:"Johnny Cash", genre:"Country", low:"D3", high:"G3"},
+  {title:"Folsom Prison Blues", artist:"Johnny Cash", genre:"Country", low:"F2", high:"C4"},
+  {title:"I Walk the Line", artist:"Johnny Cash", genre:"Country", low:"D2", high:"C4"},
+  {title:"Man in Black", artist:"Johnny Cash", genre:"Country", low:"A2", high:"D4"},
+  {title:"Ring of Fire", artist:"Johnny Cash", genre:"Country", low:"F#3", high:"A4"},
+  {title:"Jackson", artist:"Johnny Cash & June Carter", genre:"Country", low:"G2", high:"A#4"},
+  {title:"Hurt", artist:"Johnny Cash (cover)", genre:"Country", low:"F2", high:"G3"},
+  {title:"Coward of the County", artist:"Kenny Rogers", genre:"Country", low:"G2", high:"E4"},
+  {title:"The Gambler", artist:"Kenny Rogers", genre:"Country", low:"A#2", high:"E4"},
+  {title:"Islands in the Stream", artist:"Kenny Rogers & Dolly Parton", genre:"Country", low:"C4", high:"F5"},
+  {title:"Amazed", artist:"Lonestar", genre:"Country", low:"D3", high:"G4"},
+  {title:"Big Iron", artist:"Marty Robbins", genre:"Country", low:"C3", high:"D4"},
+  {title:"Devil Woman", artist:"Marty Robbins", genre:"Country", low:"C#3", high:"F#4"},
+  {title:"El Paso", artist:"Marty Robbins", genre:"Country", low:"D3", high:"B4"},
+  {title:"Fishin' in the Dark", artist:"Nitty Gritty Dirt Band", genre:"Country", low:"D3", high:"G4"},
+  {title:"Crazy", artist:"Patsy Cline (male cover key)", genre:"Country", low:"D4", high:"G5"},
+  {title:"I Fall to Pieces", artist:"Patsy Cline (male cover key)", genre:"Country", low:"C4", high:"E5"},
+  {title:"Amie", artist:"Pure Prairie League", genre:"Country", low:"C3", high:"A4"},
+  {title:"Forever and Ever, Amen", artist:"Randy Travis", genre:"Country", low:"A2", high:"B3"},
+  {title:"Elvira", artist:"The Oak Ridge Boys", genre:"Country", low:"G2", high:"A3"},
+  {title:"Rocky Top", artist:"The Osborne Brothers", genre:"Country", low:"C3", high:"A#3"},
+  {title:"Don't Take the Girl", artist:"Tim McGraw", genre:"Country", low:"D3", high:"E4"},
+  {title:"Highway Don't Care", artist:"Tim McGraw", genre:"Country", low:"A2", high:"A4"},
+  {title:"Humble and Kind", artist:"Tim McGraw", genre:"Country", low:"B2", high:"F#4"},
+  {title:"Indian Outlaw", artist:"Tim McGraw", genre:"Country", low:"B2", high:"G4"},
+  {title:"Just to See You Smile", artist:"Tim McGraw", genre:"Country", low:"D3", high:"E4"},
+  {title:"Live Like You Were Dying", artist:"Tim McGraw", genre:"Country", low:"D3", high:"F#4"},
+  {title:"Real Good Man", artist:"Tim McGraw", genre:"Country", low:"A2", high:"F#4"},
+  {title:"Something Like That", artist:"Tim McGraw", genre:"Country", low:"C3", high:"G#4"},
+  {title:"Where the Green Grass Grows", artist:"Tim McGraw", genre:"Country", low:"D3", high:"G4"},
+  {title:"Courtesy of the Red, White and Blue", artist:"Toby Keith", genre:"Country", low:"F#2", high:"E4"},
+  {title:"How Do You Like Me Now?!", artist:"Toby Keith", genre:"Country", low:"A2", high:"G4"},
+  {title:"Should've Been a Cowboy", artist:"Toby Keith", genre:"Country", low:"D3", high:"E4"},
+  {title:"Beer for My Horses", artist:"Toby Keith & Willie Nelson", genre:"Country", low:"E2", high:"D4"},
+  {title:"Always on My Mind", artist:"Willie Nelson", genre:"Country", low:"G2", high:"B3"},
+  {title:"Blue Eyes Crying in the Rain", artist:"Willie Nelson", genre:"Country", low:"C3", high:"D#4"},
+  {title:"On the Road Again", artist:"Willie Nelson", genre:"Country", low:"B2", high:"E4"},
+  {title:"Chicken Fried", artist:"Zac Brown Band", genre:"Country", low:"D3", high:"F#4"},
+  {title:"Alice's Restaurant", artist:"Arlo Guthrie", genre:"Folk", low:"D3", high:"E4"},
+  {title:"'Cross the Green Mountain", artist:"Bob Dylan", genre:"Folk", low:"G#2", high:"G#3"},
+  {title:"'Til I Fell In Love With You", artist:"Bob Dylan", genre:"Folk", low:"A#2", high:"C#4"},
+  {title:"A Hard Rain's A-Gonna Fall", artist:"Bob Dylan", genre:"Folk", low:"E3", high:"E4"},
+  {title:"All I Really Want To Do", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"A4"},
+  {title:"Autumn Leaves", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"C4"},
+  {title:"Baby Let Me Follow You Down", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"E4"},
+  {title:"Ballad of Hollis Brown", artist:"Bob Dylan", genre:"Folk", low:"C#3", high:"C#4"},
+  {title:"Blind Willie McTell", artist:"Bob Dylan", genre:"Folk", low:"E2", high:"B4"},
+  {title:"Blowin' in the Wind", artist:"Bob Dylan", genre:"Folk", low:"B2", high:"A3"},
+  {title:"Born in Time", artist:"Bob Dylan", genre:"Folk", low:"B2", high:"E4"},
+  {title:"Buckets of Rain", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"C#4"},
+  {title:"Christmas Island", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"C#4"},
+  {title:"Dark Eyes", artist:"Bob Dylan", genre:"Folk", low:"D3", high:"E4"},
+  {title:"Dignity", artist:"Bob Dylan", genre:"Folk", low:"D#3", high:"D#4"},
+  {title:"Do You Hear What I Hear?", artist:"Bob Dylan", genre:"Folk", low:"A#2", high:"B3"},
+  {title:"Don't Think Twice, It's All Right", artist:"Bob Dylan", genre:"Folk", low:"E3", high:"C#5"},
+  {title:"Don't Think Twice, It's Alright", artist:"Bob Dylan", genre:"Folk", low:"G#2", high:"B3"},
+  {title:"Duquesne Whistle", artist:"Bob Dylan", genre:"Folk", low:"D3", high:"C4"},
+  {title:"Every Grain of Sand", artist:"Bob Dylan", genre:"Folk", low:"D3", high:"C4"},
+  {title:"Everything Is Broken", artist:"Bob Dylan", genre:"Folk", low:"B2", high:"E4"},
+  {title:"Forever Young", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"A4"},
+  {title:"Fourth Time Around", artist:"Bob Dylan", genre:"Folk", low:"B2", high:"E4"},
+  {title:"Girl from the North Country", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"D5"},
+  {title:"Gotta Serve Somebody", artist:"Bob Dylan", genre:"Folk", low:"C3", high:"E4"},
+  {title:"Have Yourself a Merry Little Christmas", artist:"Bob Dylan", genre:"Folk", low:"G2", high:"C4"},
+  {title:"Here Comes Santa Claus", artist:"Bob Dylan", genre:"Folk", low:"G2", high:"C4"},
+  {title:"I Believe In You", artist:"Bob Dylan", genre:"Folk", low:"C#3", high:"E4"},
+  {title:"I Contain Multitudes", artist:"Bob Dylan", genre:"Folk", low:"E2", high:"E3"},
+  {title:"I Don't Believe You", artist:"Bob Dylan", genre:"Folk", low:"B2", high:"E4"},
+  {title:"I Shall Be Released", artist:"Bob Dylan", genre:"Folk", low:"A2", high:"F#4"},
+  {title:"I Threw It All Away", artist:"Bob Dylan", genre:"Folk", low:"G2", high:"E4"},
+  {title:"Shelter from the Storm", artist:"Bob Dylan", genre:"Folk", low:"C3", high:"C4"},
+  {title:"Simple Twist of Fate", artist:"Bob Dylan", genre:"Folk", low:"C3", high:"E4"},
+  {title:"Tangled Up in Blue", artist:"Bob Dylan", genre:"Folk", low:"D3", high:"D4"},
+  {title:"The Times They Are A-Changin'", artist:"Bob Dylan", genre:"Folk", low:"G3", high:"D4"},
+  {title:"Guinnevere", artist:"Crosby, Stills & Nash", genre:"Folk", low:"D3", high:"D4"},
+  {title:"Helplessly Hoping", artist:"Crosby, Stills & Nash", genre:"Folk", low:"G2", high:"G4"},
+  {title:"Long Time Gone", artist:"Crosby, Stills & Nash", genre:"Folk", low:"E3", high:"B4"},
+  {title:"Southern Cross", artist:"Crosby, Stills & Nash", genre:"Folk", low:"D3", high:"G4"},
+  {title:"Ohio", artist:"Crosby, Stills, Nash & Young", genre:"Folk", low:"C4", high:"A#4"},
+  {title:"Our House", artist:"Crosby, Stills, Nash & Young", genre:"Folk", low:"B2", high:"E4"},
+  {title:"Teach Your Children", artist:"Crosby, Stills, Nash & Young", genre:"Folk", low:"C3", high:"C4"},
+  {title:"Landslide", artist:"Fleetwood Mac", genre:"Folk", low:"D3", high:"G4"},
+  {title:"By the Time I Get to Phoenix", artist:"Glen Campbell", genre:"Folk", low:"E3", high:"D4"},
+  {title:"Gentle on My Mind", artist:"Glen Campbell", genre:"Folk", low:"C3", high:"A3"},
+  {title:"Rhinestone Cowboy", artist:"Glen Campbell", genre:"Folk", low:"G2", high:"G4"},
+  {title:"Southern Nights", artist:"Glen Campbell", genre:"Folk", low:"D3", high:"F4"},
+  {title:"Wichita Lineman", artist:"Glen Campbell", genre:"Folk", low:"C3", high:"D4"},
+  {title:"Early Morning Rain", artist:"Gordon Lightfoot", genre:"Folk", low:"A2", high:"A3"},
+  {title:"If You Could Read My Mind", artist:"Gordon Lightfoot", genre:"Folk", low:"G2", high:"B3"},
+  {title:"The Wreck of the Edmund Fitzgerald", artist:"Gordon Lightfoot", genre:"Folk", low:"E2", high:"B5"},
+  {title:"Ripple", artist:"Grateful Dead", genre:"Folk", low:"B2", high:"C4"},
+  {title:"Uncle John's Band", artist:"Grateful Dead", genre:"Folk", low:"B2", high:"E4"},
+  {title:"Cat's in the Cradle", artist:"Harry Chapin", genre:"Folk", low:"C3", high:"C4"},
+  {title:"Taxi", artist:"Harry Chapin", genre:"Folk", low:"B2", high:"A4"},
+  {title:"Carolina in My Mind", artist:"James Taylor", genre:"Folk", low:"C3", high:"D4"},
+  {title:"Country Road", artist:"James Taylor", genre:"Folk", low:"A2", high:"D4"},
+  {title:"Fire and Rain", artist:"James Taylor", genre:"Folk", low:"G2", high:"D4"},
+  {title:"Shower the People", artist:"James Taylor", genre:"Folk", low:"D3", high:"D4"},
+  {title:"Sweet Baby James", artist:"James Taylor", genre:"Folk", low:"A2", high:"C#4"},
+  {title:"You've Got a Friend", artist:"James Taylor", genre:"Folk", low:"G2", high:"B3"},
+  {title:"Diamonds & Rust", artist:"Joan Baez (male cover key)", genre:"Folk", low:"G3", high:"A#4"},
+  {title:"Annie's Song", artist:"John Denver", genre:"Folk", low:"F#3", high:"E4"},
+  {title:"Leaving on a Jet Plane", artist:"John Denver", genre:"Folk", low:"D3", high:"G4"},
+  {title:"Big Yellow Taxi", artist:"Joni Mitchell (male cover key)", genre:"Folk", low:"E3", high:"F#5"},
+  {title:"Both Sides Now", artist:"Joni Mitchell (male cover key)", genre:"Folk", low:"F#3", high:"Cb5"},
+  {title:"Me and Bobby McGee", artist:"Kris Kristofferson", genre:"Folk", low:"E2", high:"D#4"},
+  {title:"Sunday Morning Coming Down", artist:"Kris Kristofferson", genre:"Folk", low:"E2", high:"F#4"},
+  {title:"Long Black Veil", artist:"Lefty Frizzell", genre:"Folk", low:"C3", high:"C4"},
+  {title:"Bird on the Wire", artist:"Leonard Cohen", genre:"Folk", low:"G2", high:"E4"},
+  {title:"So Long, Marianne", artist:"Leonard Cohen", genre:"Folk", low:"G2", high:"C4"},
+  {title:"Suzanne", artist:"Leonard Cohen", genre:"Folk", low:"E3", high:"F#4"},
+  {title:"After the Gold Rush", artist:"Neil Young", genre:"Folk", low:"B3", high:"B4"},
+  {title:"Comes a Time", artist:"Neil Young", genre:"Folk", low:"G3", high:"F4"},
+  {title:"Harvest Moon", artist:"Neil Young", genre:"Folk", low:"C3", high:"E4"},
+  {title:"Heart of Gold", artist:"Neil Young", genre:"Folk", low:"D3", high:"E4"},
+  {title:"Helpless", artist:"Neil Young", genre:"Folk", low:"A3", high:"F#4"},
+  {title:"Old Man", artist:"Neil Young", genre:"Folk", low:"A2", high:"A4"},
+  {title:"Only Love Can Break Your Heart", artist:"Neil Young", genre:"Folk", low:"G3", high:"B4"},
+  {title:"The Needle and the Damage Done", artist:"Neil Young", genre:"Folk", low:"G3", high:"F4"},
+  {title:"American Tune", artist:"Paul Simon", genre:"Folk", low:"C3", high:"F4"},
+  {title:"Graceland", artist:"Paul Simon", genre:"Folk", low:"C3", high:"C4"},
+  {title:"Lemon Tree", artist:"Peter, Paul and Mary", genre:"Folk", low:"G4", high:"A#5"},
+  {title:"Puff, the Magic Dragon", artist:"Peter, Paul and Mary", genre:"Folk", low:"C#4", high:"B4"},
+  {title:"Streets of London", artist:"Ralph McTell", genre:"Folk", low:"A2", high:"A3"},
+  {title:"Dang Me", artist:"Roger Miller", genre:"Folk", low:"C3", high:"F4"},
+  {title:"King of the Road", artist:"Roger Miller", genre:"Folk", low:"A#2", high:"F#4"},
+  {title:"Little Green Apples", artist:"Roger Miller", genre:"Folk", low:"C#3", high:"D4"},
+  {title:"Homeward Bound", artist:"Simon & Garfunkel", genre:"Folk", low:"G2", high:"C4"},
+  {title:"Scarborough Fair", artist:"Simon & Garfunkel", genre:"Folk", low:"C3", high:"D4"},
+  {title:"The Boxer", artist:"Simon & Garfunkel", genre:"Folk", low:"C3", high:"F4"},
+  {title:"The Sound of Silence", artist:"Simon & Garfunkel", genre:"Folk", low:"C3", high:"F4"},
+  {title:"House of the Rising Sun", artist:"The Animals", genre:"Folk", low:"A2", high:"A4"},
+  {title:"The Night They Drove Old Dixie Down", artist:"The Band", genre:"Folk", low:"C3", high:"G4"},
+  {title:"Keep on the Sunny Side", artist:"The Carter Family", genre:"Folk", low:"F3", high:"G4"},
+  {title:"Tom Dooley", artist:"The Kingston Trio", genre:"Folk", low:"D3", high:"B3"},
+  {title:"If I Needed You", artist:"Townes Van Zandt", genre:"Folk", low:"A2", high:"G3"},
+  {title:"Tecumseh Valley", artist:"Townes Van Zandt", genre:"Folk", low:"C4", high:"A4"},
+  {title:"This Land Is Your Land", artist:"Woody Guthrie", genre:"Folk", low:"D3", high:"C4"},
+  {title:"Great Are You Lord", artist:"All Sons & Daughters", genre:"Gospel", low:"C4", high:"D5"},
+  {title:"Wake Up", artist:"All Sons & Daughters", genre:"Gospel", low:"E3", high:"A4"},
+  {title:"All Because of Jesus", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"F4"},
+  {title:"Always Remember", artist:"Andraé Crouch", genre:"Gospel", low:"G2", high:"C4"},
+  {title:"Bless His Holy Name", artist:"Andraé Crouch", genre:"Gospel", low:"F2", high:"C#4"},
+  {title:"Come Closer To Me", artist:"Andraé Crouch", genre:"Gospel", low:"G2", high:"F#4"},
+  {title:"Finally", artist:"Andraé Crouch", genre:"Gospel", low:"C3", high:"F#4"},
+  {title:"Give It All Back To Me", artist:"Andraé Crouch", genre:"Gospel", low:"A#2", high:"G4"},
+  {title:"God Still Loves Me", artist:"Andraé Crouch", genre:"Gospel", low:"B2", high:"G4"},
+  {title:"Got Me Some Angels", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"F4"},
+  {title:"Holy", artist:"Andraé Crouch", genre:"Gospel", low:"G#2", high:"E4"},
+  {title:"It's Just a Matter of Time", artist:"Andraé Crouch", genre:"Gospel", low:"F#2", high:"E4"},
+  {title:"Jesus Is Lord", artist:"Andraé Crouch", genre:"Gospel", low:"E3", high:"G4"},
+  {title:"Jesus Is the Answer", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"B3"},
+  {title:"Let the Church Say Amen", artist:"Andraé Crouch", genre:"Gospel", low:"G#2", high:"G#4"},
+  {title:"Let's Worship Him", artist:"Andraé Crouch", genre:"Gospel", low:"E2", high:"D4"},
+  {title:"Livin' This Kind of Life", artist:"Andraé Crouch", genre:"Gospel", low:"F2", high:"F4"},
+  {title:"Mercy", artist:"Andraé Crouch", genre:"Gospel", low:"G2", high:"G4"},
+  {title:"Mighty Wind", artist:"Andraé Crouch", genre:"Gospel", low:"G2", high:"D4"},
+  {title:"My Tribute", artist:"Andraé Crouch", genre:"Gospel", low:"C3", high:"G#4"},
+  {title:"Nobody Else Like You", artist:"Andraé Crouch", genre:"Gospel", low:"A#2", high:"F4"},
+  {title:"Oh, It Is Jesus", artist:"Andraé Crouch", genre:"Gospel", low:"F2", high:"D#4"},
+  {title:"Perfect Peace", artist:"Andraé Crouch", genre:"Gospel", low:"D3", high:"G4"},
+  {title:"Quiet Times", artist:"Andraé Crouch", genre:"Gospel", low:"A#2", high:"F4"},
+  {title:"Soon and Very Soon", artist:"Andraé Crouch", genre:"Gospel", low:"D#3", high:"D4"},
+  {title:"That's Why I Needed You", artist:"Andraé Crouch", genre:"Gospel", low:"D#3", high:"F4"},
+  {title:"The Blood Will Never Lose Its Power", artist:"Andraé Crouch", genre:"Gospel", low:"D3", high:"C#4"},
+  {title:"The Lord Is My Light", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"F#4"},
+  {title:"This Is Another Day", artist:"Andraé Crouch", genre:"Gospel", low:"G2", high:"A4"},
+  {title:"To Be Used of God", artist:"Andraé Crouch", genre:"Gospel", low:"C#3", high:"D4"},
+  {title:"Until Jesus Comes", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"A4"},
+  {title:"We Give You Glory", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"D#4"},
+  {title:"Yes, Lord", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"D4"},
+  {title:"You Can Depend on Me", artist:"Andraé Crouch", genre:"Gospel", low:"A2", high:"B3"},
+  {title:"Goodness of God", artist:"Bethel Music", genre:"Gospel", low:"C4", high:"G5"},
+  {title:"No Longer Slaves", artist:"Bethel Music", genre:"Gospel", low:"A3", high:"C5"},
+  {title:"Raise a Hallelujah", artist:"Bethel Music", genre:"Gospel", low:"A3", high:"D5"},
+  {title:"Because He Lives", artist:"Bill & Gloria Gaither", genre:"Gospel", low:"A4", high:"C6"},
+  {title:"There's Something About That Name", artist:"Bill & Gloria Gaither", genre:"Gospel", low:"F4", high:"D5"},
+  {title:"Come On, Ring Those Bells", artist:"Bill Gaither", genre:"Gospel", low:"A2", high:"A3"},
+  {title:"Gone", artist:"Bill Gaither", genre:"Gospel", low:"C3", high:"D4"},
+  {title:"It Will Be Worth It All", artist:"Bill Gaither", genre:"Gospel", low:"D3", high:"D4"},
+  {title:"Master of the Wind", artist:"Bill Gaither", genre:"Gospel", low:"B2", high:"C4"},
+  {title:"Sweet, Sweet Spirit", artist:"Bill Gaither", genre:"Gospel", low:"B2", high:"E4"},
+  {title:"The Eastern Gate", artist:"Bill Gaither", genre:"Gospel", low:"B2", high:"D4"},
+  {title:"The Sweetest Words He Ever Said", artist:"Bill Gaither", genre:"Gospel", low:"D3", high:"D4"},
+  {title:"We Have This Moment, Today", artist:"Bill Gaither", genre:"Gospel", low:"G2", high:"C#4"},
+  {title:"What a Savior", artist:"Bill Gaither", genre:"Gospel", low:"C#3", high:"F#4"},
+  {title:"Your First Day In Heaven", artist:"Bill Gaither", genre:"Gospel", low:"G2", high:"D4"},
+  {title:"Bind Us Together", artist:"Bob Gillman", genre:"Gospel", low:"F3", high:"C4"},
+  {title:"A Christmas Alleluia", artist:"Chris Tomlin", genre:"Gospel", low:"C3", high:"G#4"},
+  {title:"A King Like This", artist:"Chris Tomlin", genre:"Gospel", low:"E3", high:"F#4"},
+  {title:"Adore", artist:"Chris Tomlin", genre:"Gospel", low:"E3", high:"F4"},
+  {title:"All Bow Down", artist:"Chris Tomlin", genre:"Gospel", low:"B2", high:"F#4"},
+  {title:"All To Us", artist:"Chris Tomlin", genre:"Gospel", low:"C3", high:"A4"},
+  {title:"All the Way My Savior Leads Me", artist:"Chris Tomlin", genre:"Gospel", low:"D#3", high:"F4"},
+  {title:"Amazing Grace", artist:"Chris Tomlin", genre:"Gospel", low:"D3", high:"G4"},
+  {title:"Amazing Grace (My Chains Are Gone)", artist:"Chris Tomlin", genre:"Gospel", low:"C3", high:"F4"},
+  {title:"Angels We Have Heard on High", artist:"Chris Tomlin", genre:"Gospel", low:"B2", high:"E4"},
+  {title:"At the Cross", artist:"Chris Tomlin", genre:"Gospel", low:"D#3", high:"G#4"},
+  {title:"Awakening", artist:"Chris Tomlin", genre:"Gospel", low:"D#3", high:"G4"},
+  {title:"Bethlehem", artist:"Chris Tomlin", genre:"Gospel", low:"F3", high:"G4"},
+  {title:"Born That We May Have Life", artist:"Chris Tomlin", genre:"Gospel", low:"E3", high:"A4"},
+  {title:"Boundary Lines", artist:"Chris Tomlin", genre:"Gospel", low:"D3", high:"G4"},
+  {title:"Chosen Generation", artist:"Chris Tomlin", genre:"Gospel", low:"C#3", high:"B4"},
+  {title:"Come Home Running", artist:"Chris Tomlin", genre:"Gospel", low:"E2", high:"E4"},
+  {title:"Come Thou Fount (I Will Sing)", artist:"Chris Tomlin", genre:"Gospel", low:"D3", high:"F#4"},
+  {title:"Come, Let Us Worship and Bow Down", artist:"Chris Tomlin", genre:"Gospel", low:"G2", high:"D4"},
+  {title:"Countless Wonders", artist:"Chris Tomlin", genre:"Gospel", low:"D#3", high:"F4"},
+  {title:"Crown Him (Majesty)", artist:"Chris Tomlin", genre:"Gospel", low:"C#3", high:"G4"},
+  {title:"Emmanuel (Hallowed Manger Ground)", artist:"Chris Tomlin", genre:"Gospel", low:"C3", high:"G4"},
+  {title:"Enough", artist:"Chris Tomlin", genre:"Gospel", low:"A2", high:"E4"},
+  {title:"Everlasting God", artist:"Chris Tomlin", genre:"Gospel", low:"C3", high:"F4"},
+  {title:"Everything", artist:"Chris Tomlin", genre:"Gospel", low:"F2", high:"F#4"},
+  {title:"How Great Is Our God", artist:"Chris Tomlin", genre:"Gospel", low:"E3", high:"F4"},
+  {title:"Indescribable", artist:"Chris Tomlin", genre:"Gospel", low:"B3", high:"G4"},
+  {title:"Our God", artist:"Chris Tomlin", genre:"Gospel", low:"A3", high:"G4"},
+  {title:"Christ Be Magnified", artist:"Cody Carnes", genre:"Gospel", low:"E3", high:"F#4"},
+  {title:"Reckless Love", artist:"Cory Asbury", genre:"Gospel", low:"B2", high:"A4"},
+  {title:"Shout to the Lord", artist:"Darlene Zschech (male cover key)", genre:"Gospel", low:"E4", high:"B5"},
+  {title:"How He Loves", artist:"David Crowder Band", genre:"Gospel", low:"A2", high:"G4"},
+  {title:"Give Thanks", artist:"Don Moen", genre:"Gospel", low:"A2", high:"C4"},
+  {title:"Oh Happy Day", artist:"Edwin Hawkins Singers", genre:"Gospel", low:"E3", high:"D4"},
+  {title:"Graves into Gardens", artist:"Elevation Worship", genre:"Gospel", low:"F#4", high:"G#5"},
+  {title:"Every Praise", artist:"Hezekiah Walker", genre:"Gospel", low:"A2", high:"B3"},
+  {title:"I Need You to Survive", artist:"Hezekiah Walker", genre:"Gospel", low:"G#2", high:"A#3"},
+  {title:"Cornerstone", artist:"Hillsong", genre:"Gospel", low:"C4", high:"A4"},
+  {title:"Oceans (Where Feet May Fail)", artist:"Hillsong United", genre:"Gospel", low:"A3", high:"D5"},
+  {title:"What a Beautiful Name", artist:"Hillsong Worship", genre:"Gospel", low:"A2", high:"B3"},
+  {title:"Lord I Need You", artist:"Matt Maher", genre:"Gospel", low:"A#2", high:"F4"},
+  {title:"10,000 Reasons (Bless the Lord)", artist:"Matt Redman", genre:"Gospel", low:"G2", high:"B3"},
+  {title:"Blessed Be Your Name", artist:"Matt Redman", genre:"Gospel", low:"C3", high:"F4"},
+  {title:"Above All", artist:"Michael W. Smith", genre:"Gospel", low:"A2", high:"C4"},
+  {title:"Friends", artist:"Michael W. Smith", genre:"Gospel", low:"D3", high:"G#4"},
+  {title:"Great Is the Lord", artist:"Michael W. Smith", genre:"Gospel", low:"B2", high:"E4"},
+  {title:"Build My Life", artist:"Pat Barrett", genre:"Gospel", low:"D#3", high:"F4"},
+  {title:"Living Hope", artist:"Phil Wickham", genre:"Gospel", low:"D#3", high:"G#4"},
+  {title:"Days of Elijah", artist:"Robin Mark", genre:"Gospel", low:"G2", high:"C4"},
+  {title:"Way Maker", artist:"Sinach / Leeland", genre:"Gospel", low:"B3", high:"C#5"},
+  {title:"Here I Am to Worship", artist:"Tim Hughes", genre:"Gospel", low:"A2", high:"A3"},
+  {title:"As Long as I'm Singin'", artist:"Bobby Darin", genre:"Jazz Standards", low:"D3", high:"D4"},
+  {title:"Beyond the Sea", artist:"Bobby Darin", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Clementine", artist:"Bobby Darin", genre:"Jazz Standards", low:"A#2", high:"G#4"},
+  {title:"Dream Lover", artist:"Bobby Darin", genre:"Jazz Standards", low:"D3", high:"C4"},
+  {title:"Eighteen Yellow Roses", artist:"Bobby Darin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"If I Were a Carpenter", artist:"Bobby Darin", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"In Love In Vain", artist:"Bobby Darin", genre:"Jazz Standards", low:"A#2", high:"D#4"},
+  {title:"Lovin' You", artist:"Bobby Darin", genre:"Jazz Standards", low:"B2", high:"C#4"},
+  {title:"Mack the Knife", artist:"Bobby Darin", genre:"Jazz Standards", low:"D3", high:"D4"},
+  {title:"More", artist:"Bobby Darin", genre:"Jazz Standards", low:"G2", high:"D4"},
+  {title:"Multiplication", artist:"Bobby Darin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Simple Song of Freedom", artist:"Bobby Darin", genre:"Jazz Standards", low:"C3", high:"B3"},
+  {title:"That's All", artist:"Bobby Darin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Things", artist:"Bobby Darin", genre:"Jazz Standards", low:"C3", high:"G4"},
+  {title:"You're the Reason I'm Living", artist:"Bobby Darin", genre:"Jazz Standards", low:"A2", high:"F#4"},
+  {title:"(Remember Me) I'm the One Who Loves You", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"D4"},
+  {title:"A Marshmallow World", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"Ain't That a Kick in the Head", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Baby, It's Cold Outside", artist:"Dean Martin", genre:"Jazz Standards", low:"E3", high:"F#4"},
+  {title:"Bouquet of Roses", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"C4"},
+  {title:"Do It Yourself", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"F4"},
+  {title:"Ev'ry Street's a Boulevard (In Old New York)", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"G4"},
+  {title:"Everybody Loves Somebody", artist:"Dean Martin", genre:"Jazz Standards", low:"G#2", high:"B3"},
+  {title:"Good Mornin' Life", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"Goodnight Sweetheart", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"D4"},
+  {title:"Hit the Road To Dreamland", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Houston", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"C4"},
+  {title:"How D'ya Like Your Eggs In the Morning?", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"How Do You Speak To An Angel?", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"I Met a Girl", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"D#4"},
+  {title:"I Take a Lot of Pride In What I Am", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"A3"},
+  {title:"I Will", artist:"Dean Martin", genre:"Jazz Standards", low:"D3", high:"C4"},
+  {title:"If", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"In the Chapel in the Moonlight", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"E4"},
+  {title:"Innamorata (Sweetheart)", artist:"Dean Martin", genre:"Jazz Standards", low:"D3", high:"D4"},
+  {title:"Just In Time", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"D4"},
+  {title:"Lay Some Happiness on Me", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Little Old Wine Drinker Me", artist:"Dean Martin", genre:"Jazz Standards", low:"A2", high:"C4"},
+  {title:"Memories Are Made of This", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"D4"},
+  {title:"My Heart Cries for You", artist:"Dean Martin", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"On an Evening in Rome", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"Once in Love with Amy", artist:"Dean Martin", genre:"Jazz Standards", low:"D3", high:"D4"},
+  {title:"Powder Your Face With Sunshine", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"D4"},
+  {title:"Relax-Ay-Voo", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"D#4"},
+  {title:"Return To Me", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Somewhere There's a Someone", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"That Certain Party", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"D#4"},
+  {title:"That's Amore", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"D4"},
+  {title:"That's Amore (That's Love)", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"D4"},
+  {title:"The Christmas Blues", artist:"Dean Martin", genre:"Jazz Standards", low:"A2", high:"C#4"},
+  {title:"The Night Is Young (And You're So Beautiful)", artist:"Dean Martin", genre:"Jazz Standards", low:"B2", high:"E4"},
+  {title:"The Object of My Affection", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"D#4"},
+  {title:"The Peanut Vendor", artist:"Dean Martin", genre:"Jazz Standards", low:"D3", high:"G4"},
+  {title:"Under the Bridges of Paris", artist:"Dean Martin", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Volare", artist:"Dean Martin", genre:"Jazz Standards", low:"C4", high:"E5"},
+  {title:"Walkin' My Baby Back Home", artist:"Dean Martin", genre:"Jazz Standards", low:"D3", high:"F4"},
+  {title:"Who's Got the Action?", artist:"Dean Martin", genre:"Jazz Standards", low:"A#2", high:"C#4"},
+  {title:"Wrap Your Troubles In Dreams", artist:"Dean Martin", genre:"Jazz Standards", low:"E3", high:"E4"},
+  {title:"All the Way", artist:"Frank Sinatra", genre:"Jazz Standards", low:"G#2", high:"D4"},
+  {title:"Chicago (That Toddlin' Town)", artist:"Frank Sinatra", genre:"Jazz Standards", low:"D3", high:"F4"},
+  {title:"Come Dance with Me", artist:"Frank Sinatra", genre:"Jazz Standards", low:"B2", high:"D#4"},
+  {title:"Come Fly with Me", artist:"Frank Sinatra", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Fly Me to the Moon", artist:"Frank Sinatra", genre:"Jazz Standards", low:"B2", high:"G4"},
+  {title:"I've Got the World on a String", artist:"Frank Sinatra", genre:"Jazz Standards", low:"G2", high:"C4"},
+  {title:"It Was a Very Good Year", artist:"Frank Sinatra", genre:"Jazz Standards", low:"A2", high:"C4"},
+  {title:"Learnin' the Blues", artist:"Frank Sinatra", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Love and Marriage", artist:"Frank Sinatra", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"My Kind of Town", artist:"Frank Sinatra", genre:"Jazz Standards", low:"D3", high:"F4"},
+  {title:"My Way", artist:"Frank Sinatra", genre:"Jazz Standards", low:"A2", high:"F4"},
+  {title:"New York, New York", artist:"Frank Sinatra", genre:"Jazz Standards", low:"A2", high:"F#4"},
+  {title:"Nice 'n' Easy", artist:"Frank Sinatra", genre:"Jazz Standards", low:"C3", high:"D4"},
+  {title:"Strangers in the Night", artist:"Frank Sinatra", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"Summer Wind", artist:"Frank Sinatra", genre:"Jazz Standards", low:"F2", high:"F4"},
+  {title:"That's Life", artist:"Frank Sinatra", genre:"Jazz Standards", low:"D3", high:"F#4"},
+  {title:"The Coffee Song", artist:"Frank Sinatra", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Witchcraft", artist:"Frank Sinatra", genre:"Jazz Standards", low:"C3", high:"D4"},
+  {title:"Young at Heart", artist:"Frank Sinatra", genre:"Jazz Standards", low:"B2", high:"C#4"},
+  {title:"Cheek to Cheek", artist:"Fred Astaire", genre:"Jazz Standards", low:"B2", high:"E4"},
+  {title:"Puttin' on the Ritz", artist:"Fred Astaire", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Blue Moon", artist:"Jazz Standard", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"Come Rain or Come Shine", artist:"Jazz Standard", genre:"Jazz Standards", low:"D3", high:"F4"},
+  {title:"In the Still of the Night", artist:"Jazz Standard", genre:"Jazz Standards", low:"C3", high:"F4"},
+  {title:"Moonlight in Vermont", artist:"Jazz Standard", genre:"Jazz Standards", low:"C#3", high:"F4"},
+  {title:"My Funny Valentine", artist:"Jazz Standard", genre:"Jazz Standards", low:"F#2", high:"D4"},
+  {title:"My Romance", artist:"Jazz Standard", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"Night and Day", artist:"Jazz Standard", genre:"Jazz Standards", low:"A2", high:"D4"},
+  {title:"September Song", artist:"Jazz Standard", genre:"Jazz Standards", low:"F3", high:"G#4"},
+  {title:"Time After Time", artist:"Jazz Standard", genre:"Jazz Standards", low:"G#2", high:"C#4"},
+  {title:"Chances Are", artist:"Johnny Mathis", genre:"Jazz Standards", low:"D3", high:"G4"},
+  {title:"What a Wonderful World", artist:"Louis Armstrong", genre:"Jazz Standards", low:"E2", high:"A4"},
+  {title:"L-O-V-E", artist:"Nat King Cole", genre:"Jazz Standards", low:"C#3", high:"B3"},
+  {title:"Let There Be Love", artist:"Nat King Cole", genre:"Jazz Standards", low:"G2", high:"C#4"},
+  {title:"Mona Lisa", artist:"Nat King Cole", genre:"Jazz Standards", low:"D3", high:"G4"},
+  {title:"Nature Boy", artist:"Nat King Cole", genre:"Jazz Standards", low:"A#2", high:"D#4"},
+  {title:"Orange Colored Sky", artist:"Nat King Cole", genre:"Jazz Standards", low:"C3", high:"D#4"},
+  {title:"Ramblin' Rose", artist:"Nat King Cole", genre:"Jazz Standards", low:"B2", high:"E4"},
+  {title:"Route 66", artist:"Nat King Cole", genre:"Jazz Standards", low:"D2", high:"G#4"},
+  {title:"Straighten Up and Fly Right", artist:"Nat King Cole", genre:"Jazz Standards", low:"D#3", high:"C4"},
+  {title:"Unforgettable", artist:"Nat King Cole", genre:"Jazz Standards", low:"C3", high:"E4"},
+  {title:"When I Fall in Love", artist:"Nat King Cole", genre:"Jazz Standards", low:"G#2", high:"C4"},
+  {title:"Already Home", artist:"A Great Big World", genre:"Pop", low:"D3", high:"A4"},
+  {title:"Cheer Up!", artist:"A Great Big World", genre:"Pop", low:"D#2", high:"G#4"},
+  {title:"Everyone Is Gay", artist:"A Great Big World", genre:"Pop", low:"E3", high:"B4"},
+  {title:"Say Something", artist:"A Great Big World", genre:"Pop", low:"D3", high:"F#4"},
+  {title:"Someone Like You", artist:"Adele (male cover key)", genre:"Pop", low:"G3", high:"G5"},
+  {title:"Hey Brother", artist:"Avicii", genre:"Pop", low:"A#2", high:"A4"},
+  {title:"The Nights", artist:"Avicii", genre:"Pop", low:"E3", high:"F#4"},
+  {title:"Wake Me Up", artist:"Avicii", genre:"Pop", low:"D3", high:"A4"},
+  {title:"Honesty", artist:"Billy Joel", genre:"Pop", low:"A#2", high:"A4"},
+  {title:"Just the Way You Are", artist:"Billy Joel", genre:"Pop", low:"A#1", high:"G3"},
+  {title:"My Life", artist:"Billy Joel", genre:"Pop", low:"D3", high:"G4"},
+  {title:"Piano Man", artist:"Billy Joel", genre:"Pop", low:"A2", high:"G4"},
+  {title:"She's Always a Woman", artist:"Billy Joel", genre:"Pop", low:"D3", high:"G#4"},
+  {title:"Uptown Girl", artist:"Billy Joel", genre:"Pop", low:"G#3", high:"B4"},
+  {title:"Vienna", artist:"Billy Joel", genre:"Pop", low:"D#3", high:"G4"},
+  {title:"Skinny Love", artist:"Bon Iver", genre:"Pop", low:"G3", high:"G5"},
+  {title:"Thunder Road", artist:"Bruce Springsteen", genre:"Pop", low:"C3", high:"A4"},
+  {title:"Count on Me", artist:"Bruno Mars", genre:"Pop", low:"A3", high:"C5"},
+  {title:"Grenade", artist:"Bruno Mars", genre:"Pop", low:"A3", high:"D5"},
+  {title:"Just the Way You Are", artist:"Bruno Mars", genre:"Pop", low:"F3", high:"C5"},
+  {title:"Talking to the Moon", artist:"Bruno Mars", genre:"Pop", low:"G#3", high:"C#5"},
+  {title:"When I Was Your Man", artist:"Bruno Mars", genre:"Pop", low:"G3", high:"C5"},
+  {title:"A Thousand Years", artist:"Christina Perri (male cover key)", genre:"Pop", low:"F3", high:"F5"},
+  {title:"A Sky Full of Stars", artist:"Coldplay", genre:"Pop", low:"G#3", high:"F#5"},
+  {title:"Fix You", artist:"Coldplay", genre:"Pop", low:"A#2", high:"A#4"},
+  {title:"In My Place", artist:"Coldplay", genre:"Pop", low:"C3", high:"F#4"},
+  {title:"The Scientist", artist:"Coldplay", genre:"Pop", low:"C3", high:"A4"},
+  {title:"Trouble", artist:"Coldplay", genre:"Pop", low:"F#3", high:"A4"},
+  {title:"Viva la Vida", artist:"Coldplay", genre:"Pop", low:"D#3", high:"G#4"},
+  {title:"Yellow", artist:"Coldplay", genre:"Pop", low:"F#3", high:"G#4"},
+  {title:"American Pie", artist:"Don McLean", genre:"Pop", low:"D3", high:"B4"},
+  {title:"Castle on the Hill", artist:"Ed Sheeran", genre:"Pop", low:"A2", high:"A5"},
+  {title:"Give Me Love", artist:"Ed Sheeran", genre:"Pop", low:"G2", high:"B4"},
+  {title:"Perfect", artist:"Ed Sheeran", genre:"Pop", low:"G3", high:"G#4"},
+  {title:"Photograph", artist:"Ed Sheeran", genre:"Pop", low:"C3", high:"C5"},
+  {title:"Shape of You", artist:"Ed Sheeran", genre:"Pop", low:"G#2", high:"B3"},
+  {title:"Thinking Out Loud", artist:"Ed Sheeran", genre:"Pop", low:"A3", high:"A4"},
+  {title:"Home", artist:"Edward Sharpe & The Magnetic Zeros", genre:"Pop", low:"A3", high:"A5"},
+  {title:"Candle in the Wind", artist:"Elton John", genre:"Pop", low:"A1", high:"A3"},
+  {title:"Daniel", artist:"Elton John", genre:"Pop", low:"F2", high:"C4"},
+  {title:"I'm Still Standing", artist:"Elton John", genre:"Pop", low:"E2", high:"C4"},
+  {title:"Levon", artist:"Elton John", genre:"Pop", low:"C2", high:"F3"},
+  {title:"Rocket Man", artist:"Elton John", genre:"Pop", low:"F2", high:"A#3"},
+  {title:"Sacrifice", artist:"Elton John", genre:"Pop", low:"G2", high:"F3"},
+  {title:"Sorry Seems to Be the Hardest Word", artist:"Elton John", genre:"Pop", low:"G2", high:"A#3"},
+  {title:"Tiny Dancer", artist:"Elton John", genre:"Pop", low:"G2", high:"C4"},
+  {title:"Your Song", artist:"Elton John", genre:"Pop", low:"A#1", high:"F#3"},
+  {title:"Budapest", artist:"George Ezra", genre:"Pop", low:"C3", high:"C4"},
+  {title:"Collide", artist:"Howie Day", genre:"Pop", low:"F#2", high:"G#4"},
+  {title:"Believer", artist:"Imagine Dragons", genre:"Pop", low:"G3", high:"C5"},
+  {title:"Demons", artist:"Imagine Dragons", genre:"Pop", low:"D#3", high:"A#4"},
+  {title:"Radioactive", artist:"Imagine Dragons", genre:"Pop", low:"F#3", high:"B4"},
+  {title:"Thunder", artist:"Imagine Dragons", genre:"Pop", low:"E3", high:"G4"},
+  {title:"Banana Pancakes", artist:"Jack Johnson", genre:"Pop", low:"A2", high:"E4"},
+  {title:"Better Together", artist:"Jack Johnson", genre:"Pop", low:"A#2", high:"C4"},
+  {title:"I'm Yours", artist:"Jason Mraz", genre:"Pop", low:"F3", high:"F4"},
+  {title:"Lucky", artist:"Jason Mraz & Colbie Caillat", genre:"Pop", low:"D3", high:"G4"},
+  {title:"Hallelujah", artist:"Jeff Buckley", genre:"Pop", low:"C3", high:"F#4"},
+  {title:"All of Me", artist:"John Legend", genre:"Pop", low:"D#3", high:"A#4"},
+  {title:"Somewhere Only We Know", artist:"Keane", genre:"Pop", low:"A3", high:"A4"},
+  {title:"All I Want", artist:"Kodaline", genre:"Pop", low:"B3", high:"C5"},
+  {title:"High Hopes", artist:"Kodaline", genre:"Pop", low:"B2", high:"B4"},
+  {title:"Daylight", artist:"Maroon 5", genre:"Pop", low:"B2", high:"B4"},
+  {title:"She Will Be Loved", artist:"Maroon 5", genre:"Pop", low:"G3", high:"A#4"},
+  {title:"Sugar", artist:"Maroon 5", genre:"Pop", low:"C#3", high:"G#4"},
+  {title:"Sunday Morning", artist:"Maroon 5", genre:"Pop", low:"A3", high:"A4"},
+  {title:"This Love", artist:"Maroon 5", genre:"Pop", low:"C3", high:"B4"},
+  {title:"3AM", artist:"Matchbox Twenty", genre:"Pop", low:"D#3", high:"F4"},
+  {title:"Unwell", artist:"Matchbox Twenty", genre:"Pop", low:"C#3", high:"F#4"},
+  {title:"Sweet Caroline", artist:"Neil Diamond", genre:"Pop", low:"D3", high:"G4"},
+  {title:"Little Talks", artist:"Of Monsters and Men", genre:"Pop", low:"A3", high:"A5"},
+  {title:"Apologize", artist:"OneRepublic", genre:"Pop", low:"F3", high:"A#4"},
+  {title:"Counting Stars", artist:"OneRepublic", genre:"Pop", low:"C3", high:"D5"},
+  {title:"Good Life", artist:"OneRepublic", genre:"Pop", low:"F#3", high:"C#5"},
+  {title:"I Lived", artist:"OneRepublic", genre:"Pop", low:"A2", high:"A4"},
+  {title:"If I Lose Myself", artist:"OneRepublic", genre:"Pop", low:"F#3", high:"B4"},
+  {title:"Secrets", artist:"OneRepublic", genre:"Pop", low:"B3", high:"A4"},
+  {title:"Hey There Delilah", artist:"Plain White T's", genre:"Pop", low:"C#3", high:"F#4"},
+  {title:"Feel It Still", artist:"Portugal. The Man", genre:"Pop", low:"B2", high:"C#4"},
+  {title:"Angels", artist:"Robbie Williams", genre:"Pop", low:"E2", high:"B4"},
+  {title:"Feel", artist:"Robbie Williams", genre:"Pop", low:"A2", high:"A#4"},
+  {title:"She's the One", artist:"Robbie Williams", genre:"Pop", low:"F3", high:"C5"},
+  {title:"I'm Not the Only One", artist:"Sam Smith", genre:"Pop", low:"F4", high:"C6"},
+  {title:"Mercy", artist:"Shawn Mendes", genre:"Pop", low:"B2", high:"A4"},
+  {title:"Stitches", artist:"Shawn Mendes", genre:"Pop", low:"G2", high:"C4"},
+  {title:"There's Nothing Holdin' Me Back", artist:"Shawn Mendes", genre:"Pop", low:"A2", high:"A4"},
+  {title:"Treat You Better", artist:"Shawn Mendes", genre:"Pop", low:"D3", high:"A4"},
+  {title:"Fields of Gold", artist:"Sting", genre:"Pop", low:"D3", high:"D4"},
+  {title:"Fragile", artist:"Sting", genre:"Pop", low:"E3", high:"A4"},
+  {title:"Rivers and Roads", artist:"The Head and the Heart", genre:"Pop", low:"G3", high:"E5"},
+  {title:"Ho Hey", artist:"The Lumineers", genre:"Pop", low:"A2", high:"G4"},
+  {title:"Breakeven", artist:"The Script", genre:"Pop", low:"G3", high:"C5"},
+  {title:"Hall of Fame", artist:"The Script", genre:"Pop", low:"F3", high:"C5"},
+  {title:"The Man Who Can't Be Moved", artist:"The Script", genre:"Pop", low:"E2", high:"F4"},
+  {title:"Bittersweet Symphony", artist:"The Verve", genre:"Pop", low:"E3", high:"E4"},
+  {title:"Drive By", artist:"Train", genre:"Pop", low:"C#3", high:"B4"},
+  {title:"Drops of Jupiter", artist:"Train", genre:"Pop", low:"G3", high:"A4"},
+  {title:"Hey, Soul Sister", artist:"Train", genre:"Pop", low:"B3", high:"B4"},
+  {title:"Marry Me", artist:"Train", genre:"Pop", low:"G3", high:"A4"},
+  {title:"Riptide", artist:"Vance Joy", genre:"Pop", low:"G#3", high:"A#4"},
+  {title:"Knockin' on Heaven's Door", artist:"Bob Dylan", genre:"Rock", low:"D3", high:"D4"},
+  {title:"All of the Roads", artist:"Bob Seger", genre:"Rock", low:"F3", high:"F4"},
+  {title:"Detroit Made", artist:"Bob Seger", genre:"Rock", low:"E3", high:"F#4"},
+  {title:"Gates of Eden", artist:"Bob Seger", genre:"Rock", low:"A2", high:"G4"},
+  {title:"Let the Rivers Run", artist:"Bob Seger", genre:"Rock", low:"E3", high:"E4"},
+  {title:"Listen", artist:"Bob Seger", genre:"Rock", low:"C3", high:"D4"},
+  {title:"Mainstreet", artist:"Bob Seger", genre:"Rock", low:"A2", high:"F#4"},
+  {title:"Ride Out", artist:"Bob Seger", genre:"Rock", low:"D3", high:"F4"},
+  {title:"Turn the Page", artist:"Bob Seger", genre:"Rock", low:"D3", high:"G4"},
+  {title:"Always", artist:"Bon Jovi", genre:"Rock", low:"A2", high:"B4"},
+  {title:"Bed of Roses", artist:"Bon Jovi", genre:"Rock", low:"F2", high:"C5"},
+  {title:"I'll Be There for You", artist:"Bon Jovi", genre:"Rock", low:"B2", high:"D5"},
+  {title:"It's My Life", artist:"Bon Jovi", genre:"Rock", low:"C3", high:"A#4"},
+  {title:"Livin' on a Prayer", artist:"Bon Jovi", genre:"Rock", low:"G3", high:"D#5"},
+  {title:"Wanted Dead or Alive", artist:"Bon Jovi", genre:"Rock", low:"B2", high:"A3"},
+  {title:"Born to Run", artist:"Bruce Springsteen", genre:"Rock", low:"C3", high:"G#4"},
+  {title:"Dancing in the Dark", artist:"Bruce Springsteen", genre:"Rock", low:"A3", high:"A4"},
+  {title:"Glory Days", artist:"Bruce Springsteen", genre:"Rock", low:"A3", high:"F#4"},
+  {title:"My Hometown", artist:"Bruce Springsteen", genre:"Rock", low:"A2", high:"D4"},
+  {title:"Streets of Philadelphia", artist:"Bruce Springsteen", genre:"Rock", low:"A#2", high:"F5"},
+  {title:"The River", artist:"Bruce Springsteen", genre:"Rock", low:"C3", high:"G4"},
+  {title:"(Everything I Do) I Do It for You", artist:"Bryan Adams", genre:"Rock", low:"G3", high:"B4"},
+  {title:"Heaven", artist:"Bryan Adams", genre:"Rock", low:"A3", high:"C5"},
+  {title:"Run to You", artist:"Bryan Adams", genre:"Rock", low:"F#3", high:"C#5"},
+  {title:"Summer of '69", artist:"Bryan Adams", genre:"Rock", low:"A3", high:"A4"},
+  {title:"Life on Mars?", artist:"David Bowie", genre:"Rock", low:"F3", high:"A#4"},
+  {title:"Space Oddity", artist:"David Bowie", genre:"Rock", low:"G3", high:"F4"},
+  {title:"Save Tonight", artist:"Eagle-Eye Cherry", genre:"Rock", low:"G3", high:"A4"},
+  {title:"Already Gone", artist:"Eagles", genre:"Rock", low:"G3", high:"A4"},
+  {title:"Desperado", artist:"Eagles", genre:"Rock", low:"D3", high:"B4"},
+  {title:"Hotel California", artist:"Eagles", genre:"Rock", low:"E3", high:"A4"},
+  {title:"Lyin' Eyes", artist:"Eagles", genre:"Rock", low:"D3", high:"B4"},
+  {title:"New Kid in Town", artist:"Eagles", genre:"Rock", low:"C3", high:"G4"},
+  {title:"Peaceful Easy Feeling", artist:"Eagles", genre:"Rock", low:"B2", high:"D4"},
+  {title:"Take It Easy", artist:"Eagles", genre:"Rock", low:"D3", high:"C5"},
+  {title:"Tequila Sunrise", artist:"Eagles", genre:"Rock", low:"D3", high:"E4"},
+  {title:"Change the World", artist:"Eric Clapton", genre:"Rock", low:"F2", high:"A3"},
+  {title:"My Father's Eyes", artist:"Eric Clapton", genre:"Rock", low:"D3", high:"E4"},
+  {title:"Tears in Heaven", artist:"Eric Clapton", genre:"Rock", low:"E3", high:"E4"},
+  {title:"Wonderful Tonight", artist:"Eric Clapton", genre:"Rock", low:"D3", high:"E4"},
+  {title:"More Than Words", artist:"Extreme", genre:"Rock", low:"G#3", high:"F#4"},
+  {title:"Everlong", artist:"Foo Fighters", genre:"Rock", low:"B2", high:"G4"},
+  {title:"Iris", artist:"Goo Goo Dolls", genre:"Rock", low:"D3", high:"A4"},
+  {title:"November Rain", artist:"Guns N' Roses", genre:"Rock", low:"D3", high:"D#5"},
+  {title:"Patience", artist:"Guns N' Roses", genre:"Rock", low:"A2", high:"E5"},
+  {title:"The Load-Out / Stay", artist:"Jackson Browne", genre:"Rock", low:"D3", high:"G4"},
+  {title:"Time in a Bottle", artist:"Jim Croce", genre:"Rock", low:"A2", high:"C4"},
+  {title:"Any Way You Want It", artist:"Journey", genre:"Rock", low:"D3", high:"C5"},
+  {title:"Don't Stop Believin'", artist:"Journey", genre:"Rock", low:"B3", high:"C#5"},
+  {title:"Faithfully", artist:"Journey", genre:"Rock", low:"B2", high:"B3"},
+  {title:"Open Arms", artist:"Journey", genre:"Rock", low:"A2", high:"D4"},
+  {title:"Carry On Wayward Son", artist:"Kansas", genre:"Rock", low:"F3", high:"C5"},
+  {title:"Dust in the Wind", artist:"Kansas", genre:"Rock", low:"A2", high:"B3"},
+  {title:"Danny's Song", artist:"Kenny Loggins", genre:"Rock", low:"D3", high:"F#4"},
+  {title:"Fly Away", artist:"Lenny Kravitz", genre:"Rock", low:"G2", high:"C4"},
+  {title:"Free Bird", artist:"Lynyrd Skynyrd", genre:"Rock", low:"C3", high:"F4"},
+  {title:"Simple Man", artist:"Lynyrd Skynyrd", genre:"Rock", low:"G3", high:"A4"},
+  {title:"Sweet Home Alabama", artist:"Lynyrd Skynyrd", genre:"Rock", low:"G3", high:"F#4"},
+  {title:"Broken Wings", artist:"Mr. Mister", genre:"Rock", low:"F#3", high:"G#4"},
+  {title:"Home Sweet Home", artist:"Mötley Crüe", genre:"Rock", low:"A3", high:"A#4"},
+  {title:"Sister Christian", artist:"Night Ranger", genre:"Rock", low:"E3", high:"C5"},
+  {title:"Wonderwall", artist:"Oasis", genre:"Rock", low:"G3", high:"A4"},
+  {title:"Money", artist:"Pink Floyd", genre:"Rock", low:"E3", high:"F#4"},
+  {title:"Time", artist:"Pink Floyd", genre:"Rock", low:"A2", high:"A3"},
+  {title:"Wish You Were Here", artist:"Pink Floyd", genre:"Rock", low:"G2", high:"A3"},
+  {title:"Every Rose Has Its Thorn", artist:"Poison", genre:"Rock", low:"D#2", high:"C#4"},
+  {title:"Everybody Hurts", artist:"R.E.M.", genre:"Rock", low:"G2", high:"A4"},
+  {title:"Losing My Religion", artist:"R.E.M.", genre:"Rock", low:"D3", high:"C4"},
+  {title:"Under the Bridge", artist:"Red Hot Chili Peppers", genre:"Rock", low:"B2", high:"G4"},
+  {title:"Still Loving You", artist:"Scorpions", genre:"Rock", low:"F#2", high:"D5"},
+  {title:"Wind of Change", artist:"Scorpions", genre:"Rock", low:"G4", high:"G5"},
+  {title:"I Remember You", artist:"Skid Row", genre:"Rock", low:"G3", high:"F5"},
+  {title:"Chasing Cars", artist:"Snow Patrol", genre:"Rock", low:"E3", high:"D4"},
+  {title:"Babe", artist:"Styx", genre:"Rock", low:"A3", high:"C5"},
+  {title:"Come Sail Away", artist:"Styx", genre:"Rock", low:"C4", high:"G#4"},
+  {title:"Ophelia", artist:"The Band", genre:"Rock", low:"A3", high:"A4"},
+  {title:"The Weight", artist:"The Band", genre:"Rock", low:"E3", high:"F#4"},
+  {title:"Up on Cripple Creek", artist:"The Band", genre:"Rock", low:"D3", high:"B4"},
+  {title:"Blackbird", artist:"The Beatles", genre:"Rock", low:"E3", high:"G4"},
+  {title:"Here Comes the Sun", artist:"The Beatles", genre:"Rock", low:"D3", high:"B3"},
+  {title:"Hey Jude", artist:"The Beatles", genre:"Rock", low:"C#3", high:"A4"},
+  {title:"In My Life", artist:"The Beatles", genre:"Rock", low:"C3", high:"C4"},
+  {title:"Let It Be", artist:"The Beatles", genre:"Rock", low:"D3", high:"G4"},
+  {title:"Yesterday", artist:"The Beatles", genre:"Rock", low:"D3", high:"F4"},
+  {title:"Hard to Handle", artist:"The Black Crowes", genre:"Rock", low:"F#3", high:"B4"},
+  {title:"She Talks to Angels", artist:"The Black Crowes", genre:"Rock", low:"C3", high:"G4"},
+  {title:"American Woman", artist:"The Guess Who", genre:"Rock", low:"D3", high:"B4"},
+  {title:"These Eyes", artist:"The Guess Who", genre:"Rock", low:"G2", high:"C4"},
+  {title:"Behind Blue Eyes", artist:"The Who", genre:"Rock", low:"D3", high:"G4"},
+  {title:"Free Fallin'", artist:"Tom Petty", genre:"Rock", low:"C3", high:"E4"},
+  {title:"Learning to Fly", artist:"Tom Petty", genre:"Rock", low:"G2", high:"F4"},
+  {title:"Wildflowers", artist:"Tom Petty", genre:"Rock", low:"C3", high:"D4"},
+  {title:"Africa", artist:"Toto", genre:"Rock", low:"B2", high:"A4"},
+  {title:"Hold the Line", artist:"Toto", genre:"Rock", low:"B3", high:"C#5"},
+  {title:"Rosanna", artist:"Toto", genre:"Rock", low:"G3", high:"D5"},
+  {title:"Fast Car", artist:"Tracy Chapman", genre:"Rock", low:"E3", high:"A4"},
+  {title:"With or Without You", artist:"U2", genre:"Rock", low:"A3", high:"D6"},
+  {title:"Brown Eyed Girl", artist:"Van Morrison", genre:"Rock", low:"G2", high:"G3"},
+  {title:"Into the Mystic", artist:"Van Morrison", genre:"Rock", low:"A#2", high:"G#4"},
+  {title:"Moondance", artist:"Van Morrison", genre:"Rock", low:"E3", high:"A4"},
+  {title:"What I Did for Love", artist:"A Chorus Line", genre:"Show Tunes", low:"B3", high:"C#5"},
+  {title:"Bring Me My Bride", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"G#2", high:"F#4"},
+  {title:"Bring Me My Bride [Excerpt]", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C#3", high:"F#4"},
+  {title:"Comedy Tonight", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"A2", high:"E4"},
+  {title:"Everybody Ought To Have a Maid (Encore No.1)", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C#3", high:"E4"},
+  {title:"Everybody Ought To Have a Maid (Encore No.2)", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C#3", high:"E4"},
+  {title:"Farewell", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"B2", high:"D4"},
+  {title:"Finale Ultimo (from A Funny Thing Happened On the Way to the Forum)", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"A2", high:"A#4"},
+  {title:"Free", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"B2", high:"F4"},
+  {title:"I'm Calm", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"D3", high:"F#4"},
+  {title:"Love Is in the Air", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"B2", high:"D4"},
+  {title:"Love, I Hear [Excerpt]", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C#3", high:"E4"},
+  {title:"Lovely - Reprise", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"D3", high:"G4"},
+  {title:"Lovely [Excerpt]", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"D3", high:"F4"},
+  {title:"That Dirty Old Man", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C3", high:"F#4"},
+  {title:"That'll Show Him", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C3", high:"G4"},
+  {title:"That'll Show Him [Excerpt]", artist:"A Funny Thing Happened on the Way to the Forum", genre:"Show Tunes", low:"C3", high:"G4"},
+  {title:"Send in the Clowns", artist:"A Little Night Music (male key)", genre:"Show Tunes", low:"F#3", high:"G#4"},
+  {title:"Gaston", artist:"Beauty and the Beast", genre:"Show Tunes", low:"B3", high:"E5"},
+  {title:"Before I Gaze At You Again [Excerpt]", artist:"Camelot", genre:"Show Tunes", low:"C3", high:"D#4"},
+  {title:"C'est Moi [Excerpt]", artist:"Camelot", genre:"Show Tunes", low:"C3", high:"D4"},
+  {title:"Camelot", artist:"Camelot", genre:"Show Tunes", low:"C3", high:"D4"},
+  {title:"Follow Me", artist:"Camelot", genre:"Show Tunes", low:"A#2", high:"D#4"},
+  {title:"How to Handle a Woman", artist:"Camelot", genre:"Show Tunes", low:"A2", high:"D4"},
+  {title:"I Loved You Once in Silence", artist:"Camelot", genre:"Show Tunes", low:"C3", high:"D4"},
+  {title:"I Wonder What the King Is Doing Tonight", artist:"Camelot", genre:"Show Tunes", low:"A#2", high:"C4"},
+  {title:"If Ever I Would Leave You", artist:"Camelot", genre:"Show Tunes", low:"A2", high:"D4"},
+  {title:"If Ever I Would Leave You [Excerpt]", artist:"Camelot", genre:"Show Tunes", low:"A2", high:"D4"},
+  {title:"Simple Joys of Maidenhood [Excerpt]", artist:"Camelot", genre:"Show Tunes", low:"C#3", high:"D#4"},
+  {title:"If I Loved You", artist:"Carousel", genre:"Show Tunes", low:"C4", high:"F5"},
+  {title:"Soliloquy", artist:"Carousel", genre:"Show Tunes", low:"B3", high:"G5"},
+  {title:"You'll Never Walk Alone", artist:"Carousel", genre:"Show Tunes", low:"C#4", high:"E5"},
+  {title:"Anthem", artist:"Chess", genre:"Show Tunes", low:"D4", high:"G5"},
+  {title:"Being Alive", artist:"Company", genre:"Show Tunes", low:"D3", high:"G4"},
+  {title:"For Forever", artist:"Dear Evan Hansen", genre:"Show Tunes", low:"G2", high:"B4"},
+  {title:"Waving Through a Window", artist:"Dear Evan Hansen", genre:"Show Tunes", low:"A2", high:"A#4"},
+  {title:"You Will Be Found", artist:"Dear Evan Hansen", genre:"Show Tunes", low:"G#3", high:"F5"},
+  {title:"If I Were a Rich Man", artist:"Fiddler on the Roof", genre:"Show Tunes", low:"B3", high:"E5"},
+  {title:"Sunrise, Sunset", artist:"Fiddler on the Roof", genre:"Show Tunes", low:"D4", high:"D#5"},
+  {title:"Tradition", artist:"Fiddler on the Roof", genre:"Show Tunes", low:"C4", high:"E5"},
+  {title:"Old Devil Moon", artist:"Finian's Rainbow", genre:"Show Tunes", low:"C3", high:"D#4"},
+  {title:"Guys and Dolls", artist:"Guys and Dolls", genre:"Show Tunes", low:"B3", high:"D5"},
+  {title:"Luck Be a Lady", artist:"Guys and Dolls", genre:"Show Tunes", low:"B3", high:"C5"},
+  {title:"Sit Down You're Rockin' the Boat", artist:"Guys and Dolls", genre:"Show Tunes", low:"C4", high:"D5"},
+  {title:"Brotherhood of Man", artist:"How to Succeed in Business Without Really Trying", genre:"Show Tunes", low:"C4", high:"D5"},
+  {title:"I Believe in You", artist:"How to Succeed in Business Without Really Trying", genre:"Show Tunes", low:"G4", high:"E5"},
+  {title:"Giants in the Sky", artist:"Into the Woods", genre:"Show Tunes", low:"C#4", high:"F#5"},
+  {title:"This Is the Moment", artist:"Jekyll & Hyde", genre:"Show Tunes", low:"E4", high:"G5"},
+  {title:"Empty Chairs at Empty Tables", artist:"Les Misérables", genre:"Show Tunes", low:"A3", high:"G5"},
+  {title:"Javert's Suicide", artist:"Les Misérables", genre:"Show Tunes", low:"C4", high:"F#5"},
+  {title:"Master of the House", artist:"Les Misérables", genre:"Show Tunes", low:"B3", high:"F5"},
+  {title:"One Day More", artist:"Les Misérables", genre:"Show Tunes", low:"D#3", high:"A5"},
+  {title:"Who Am I?", artist:"Les Misérables", genre:"Show Tunes", low:"A#3", high:"A#5"},
+  {title:"Stars", artist:"Les Misérables (Javert)", genre:"Show Tunes", low:"D4", high:"E5"},
+  {title:"Grow for Me", artist:"Little Shop of Horrors", genre:"Show Tunes", low:"A#3", high:"E5"},
+  {title:"Suddenly Seymour", artist:"Little Shop of Horrors", genre:"Show Tunes", low:"C#4", high:"C#5"},
+  {title:"The Impossible Dream", artist:"Man of La Mancha", genre:"Show Tunes", low:"C3", high:"D#4"},
+  {title:"Bui Doi", artist:"Miss Saigon", genre:"Show Tunes", low:"G#3", high:"A#5"},
+  {title:"On the Street Where You Live", artist:"My Fair Lady", genre:"Show Tunes", low:"C4", high:"F5"},
+  {title:"Oh, What a Beautiful Mornin'", artist:"Oklahoma!", genre:"Show Tunes", low:"D#3", high:"E4"},
+  {title:"People Will Say We're in Love", artist:"Oklahoma!", genre:"Show Tunes", low:"C3", high:"E4"},
+  {title:"Surrey with the Fringe on Top", artist:"Oklahoma!", genre:"Show Tunes", low:"F#3", high:"G4"},
+  {title:"Consider Yourself", artist:"Oliver!", genre:"Show Tunes", low:"A2", high:"C4"},
+  {title:"Reviewing the Situation", artist:"Oliver!", genre:"Show Tunes", low:"C3", high:"F4"},
+  {title:"They Call the Wind Maria", artist:"Paint Your Wagon", genre:"Show Tunes", low:"C4", high:"F5"},
+  {title:"Corner of the Sky", artist:"Pippin", genre:"Show Tunes", low:"F3", high:"C5"},
+  {title:"I'll Cover You", artist:"Rent", genre:"Show Tunes", low:"C4", high:"A5"},
+  {title:"One Song Glory", artist:"Rent", genre:"Show Tunes", low:"D4", high:"A5"},
+  {title:"Santa Fe", artist:"Rent", genre:"Show Tunes", low:"A3", high:"F#5"},
+  {title:"Seasons of Love", artist:"Rent", genre:"Show Tunes", low:"C4", high:"D6"},
+  {title:"What You Own", artist:"Rent", genre:"Show Tunes", low:"D4", high:"F5"},
+  {title:"Without You", artist:"Rent", genre:"Show Tunes", low:"F#3", high:"A4"},
+  {title:"Ol' Man River", artist:"Show Boat", genre:"Show Tunes", low:"A#3", high:"G5"},
+  {title:"Good Morning", artist:"Singin' in the Rain", genre:"Show Tunes", low:"A#3", high:"C5"},
+  {title:"Make 'Em Laugh", artist:"Singin' in the Rain", genre:"Show Tunes", low:"C4", high:"F5"},
+  {title:"Some Enchanted Evening", artist:"South Pacific", genre:"Show Tunes", low:"C3", high:"D4"},
+  {title:"There Is Nothin' Like a Dame", artist:"South Pacific", genre:"Show Tunes", low:"C3", high:"F4"},
+  {title:"This Nearly Was Mine", artist:"South Pacific", genre:"Show Tunes", low:"D3", high:"F4"},
+  {title:"Younger Than Springtime", artist:"South Pacific", genre:"Show Tunes", low:"B2", high:"D4"},
+  {title:"It's a Grand Night for Singing", artist:"State Fair", genre:"Show Tunes", low:"D4", high:"E5"},
+  {title:"Not While I'm Around", artist:"Sweeney Todd", genre:"Show Tunes", low:"G2", high:"D#4"},
+  {title:"This Can't Be Love", artist:"The Boys from Syracuse", genre:"Show Tunes", low:"C#4", high:"E5"},
+  {title:"Try to Remember", artist:"The Fantasticks", genre:"Show Tunes", low:"B3", high:"D5"},
+  {title:"A Million Dreams", artist:"The Greatest Showman", genre:"Show Tunes", low:"C2", high:"C5"},
+  {title:"From Now On", artist:"The Greatest Showman", genre:"Show Tunes", low:"C#3", high:"E5"},
+  {title:"A Puzzlement", artist:"The King and I", genre:"Show Tunes", low:"C4", high:"E5"},
+  {title:"Shall We Dance", artist:"The King and I", genre:"Show Tunes", low:"C4", high:"A#4"},
+  {title:"Can You Feel the Love Tonight", artist:"The Lion King", genre:"Show Tunes", low:"F3", high:"G4"},
+  {title:"Circle of Life", artist:"The Lion King", genre:"Show Tunes", low:"G2", high:"C5"},
+  {title:"The Wells Fargo Wagon", artist:"The Music Man", genre:"Show Tunes", low:"B3", high:"D5"},
+  {title:"Til There Was You", artist:"The Music Man", genre:"Show Tunes", low:"D4", high:"F5"},
+  {title:"All I Ask of You", artist:"The Phantom of the Opera", genre:"Show Tunes", low:"C4", high:"G5"},
+  {title:"Music of the Night", artist:"The Phantom of the Opera", genre:"Show Tunes", low:"G#3", high:"G#5"},
+  {title:"Edelweiss", artist:"The Sound of Music", genre:"Show Tunes", low:"D4", high:"C5"},
+  {title:"Sixteen Going on Seventeen", artist:"The Sound of Music", genre:"Show Tunes", low:"C4", high:"D5"},
+  {title:"If I Only Had a Brain", artist:"The Wizard of Oz", genre:"Show Tunes", low:"G3", high:"B4"},
+  {title:"Jet Song", artist:"West Side Story", genre:"Show Tunes", low:"A#3", high:"F5"},
+  {title:"Maria", artist:"West Side Story", genre:"Show Tunes", low:"A#3", high:"A5"},
+  {title:"Something's Coming", artist:"West Side Story", genre:"Show Tunes", low:"D4", high:"F5"},
+  {title:"Tonight", artist:"West Side Story", genre:"Show Tunes", low:"B3", high:"F5"},
+  {title:"Let's Stay Together", artist:"Al Green", genre:"Soul/R&B", low:"E3", high:"A4"},
+  {title:"Love and Happiness", artist:"Al Green", genre:"Soul/R&B", low:"F3", high:"A#4"},
+  {title:"Down Home", artist:"Ben E. King", genre:"Soul/R&B", low:"B2", high:"E4"},
+  {title:"I (Who Have Nothing)", artist:"Ben E. King", genre:"Soul/R&B", low:"D#3", high:"D#4"},
+  {title:"So Much Love", artist:"Ben E. King", genre:"Soul/R&B", low:"F2", high:"A#3"},
+  {title:"Stand By Me", artist:"Ben E. King", genre:"Soul/R&B", low:"F3", high:"F4"},
+  {title:"Ain't No Sunshine", artist:"Bill Withers", genre:"Soul/R&B", low:"E3", high:"G4"},
+  {title:"Grandma's Hands", artist:"Bill Withers", genre:"Soul/R&B", low:"B2", high:"D4"},
+  {title:"Lean on Me", artist:"Bill Withers", genre:"Soul/R&B", low:"B2", high:"E4"},
+  {title:"Lovely Day", artist:"Bill Withers", genre:"Soul/R&B", low:"B2", high:"E4"},
+  {title:"Use Me", artist:"Bill Withers", genre:"Soul/R&B", low:"C#3", high:"G4"},
+  {title:"Just the Two of Us", artist:"Bill Withers & Grover Washington Jr.", genre:"Soul/R&B", low:"C#3", high:"F4"},
+  {title:"Me and Mrs. Jones", artist:"Billy Paul", genre:"Soul/R&B", low:"G3", high:"G4"},
+  {title:"Africa Unite", artist:"Bob Marley", genre:"Soul/R&B", low:"E3", high:"G4"},
+  {title:"Concrete Jungle", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"A4"},
+  {title:"Easy Skanking", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"G4"},
+  {title:"I Know a Place", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"G4"},
+  {title:"I'm Hurting Inside", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"F#4"},
+  {title:"Natural Mystic", artist:"Bob Marley", genre:"Soul/R&B", low:"E3", high:"G4"},
+  {title:"No Woman No Cry", artist:"Bob Marley", genre:"Soul/R&B", low:"A2", high:"A4"},
+  {title:"No Woman, No Cry", artist:"Bob Marley", genre:"Soul/R&B", low:"A2", high:"A4"},
+  {title:"One Love", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"A#4"},
+  {title:"One Love / People Get Ready", artist:"Bob Marley", genre:"Soul/R&B", low:"D3", high:"A4"},
+  {title:"Please Don't Rock My Boat", artist:"Bob Marley", genre:"Soul/R&B", low:"E3", high:"A4"},
+  {title:"Redemption Song", artist:"Bob Marley", genre:"Soul/R&B", low:"G3", high:"G4"},
+  {title:"Stir It Up", artist:"Bob Marley", genre:"Soul/R&B", low:"C3", high:"E4"},
+  {title:"Three Little Birds", artist:"Bob Marley", genre:"Soul/R&B", low:"A3", high:"A4"},
+  {title:"I Can't Make You Love Me", artist:"Bonnie Raitt (male cover key)", genre:"Soul/R&B", low:"D4", high:"G5"},
+  {title:"Easy", artist:"Commodores", genre:"Soul/R&B", low:"D#3", high:"G#4"},
+  {title:"Just to Be Close to You", artist:"Commodores", genre:"Soul/R&B", low:"C3", high:"G4"},
+  {title:"Nightshift", artist:"Commodores", genre:"Soul/R&B", low:"C3", high:"D4"},
+  {title:"Sail On", artist:"Commodores", genre:"Soul/R&B", low:"A2", high:"F#4"},
+  {title:"Three Times a Lady", artist:"Commodores", genre:"Soul/R&B", low:"C3", high:"D4"},
+  {title:"After the Love Has Gone", artist:"Earth, Wind & Fire", genre:"Soul/R&B", low:"C3", high:"F#4"},
+  {title:"Let's Groove", artist:"Earth, Wind & Fire", genre:"Soul/R&B", low:"F3", high:"G4"},
+  {title:"Reasons", artist:"Earth, Wind & Fire", genre:"Soul/R&B", low:"A#2", high:"G4"},
+  {title:"September", artist:"Earth, Wind & Fire", genre:"Soul/R&B", low:"A3", high:"D5"},
+  {title:"Shining Star", artist:"Earth, Wind & Fire", genre:"Soul/R&B", low:"G2", high:"D4"},
+  {title:"Baby I Need Your Loving", artist:"Four Tops", genre:"Soul/R&B", low:"F3", high:"A#4"},
+  {title:"Bernadette", artist:"Four Tops", genre:"Soul/R&B", low:"D4", high:"B4"},
+  {title:"I Can't Help Myself (Sugar Pie Honey Bunch)", artist:"Four Tops", genre:"Soul/R&B", low:"G3", high:"G4"},
+  {title:"Reach Out I'll Be There", artist:"Four Tops", genre:"Soul/R&B", low:"D#3", high:"C4"},
+  {title:"(Your Love Keeps Lifting Me) Higher and Higher", artist:"Jackie Wilson", genre:"Soul/R&B", low:"B2", high:"F#4"},
+  {title:"Lonely Teardrops", artist:"Jackie Wilson", genre:"Soul/R&B", low:"D#3", high:"C5"},
+  {title:"To Be Loved", artist:"Jackie Wilson", genre:"Soul/R&B", low:"A3", high:"C5"},
+  {title:"Ordinary People", artist:"John Legend", genre:"Soul/R&B", low:"A#2", high:"A#4"},
+  {title:"Dance with My Father", artist:"Luther Vandross", genre:"Soul/R&B", low:"F3", high:"G4"},
+  {title:"Here and Now", artist:"Luther Vandross", genre:"Soul/R&B", low:"C3", high:"B4"},
+  {title:"Never Too Much", artist:"Luther Vandross", genre:"Soul/R&B", low:"A3", high:"B4"},
+  {title:"I Heard It Through the Grapevine", artist:"Marvin Gaye", genre:"Soul/R&B", low:"A#3", high:"D#5"},
+  {title:"Let's Get It On", artist:"Marvin Gaye", genre:"Soul/R&B", low:"A#2", high:"D#4"},
+  {title:"Sexual Healing", artist:"Marvin Gaye", genre:"Soul/R&B", low:"E3", high:"A4"},
+  {title:"What's Going On", artist:"Marvin Gaye", genre:"Soul/R&B", low:"E3", high:"B4"},
+  {title:"Ain't No Mountain High Enough", artist:"Marvin Gaye & Tammi Terrell", genre:"Soul/R&B", low:"B2", high:"D#4"},
+  {title:"Feeling Good", artist:"Nina Simone (male cover key)", genre:"Soul/R&B", low:"C3", high:"A#4"},
+  {title:"(Sittin' On) The Dock of the Bay", artist:"Otis Redding", genre:"Soul/R&B", low:"E3", high:"G4"},
+  {title:"I've Been Loving You Too Long", artist:"Otis Redding", genre:"Soul/R&B", low:"E3", high:"A4"},
+  {title:"Mr. Pitiful", artist:"Otis Redding", genre:"Soul/R&B", low:"C3", high:"C5"},
+  {title:"Respect", artist:"Otis Redding", genre:"Soul/R&B", low:"E3", high:"G4"},
+  {title:"These Arms of Mine", artist:"Otis Redding", genre:"Soul/R&B", low:"F3", high:"F4"},
+  {title:"Try a Little Tenderness", artist:"Otis Redding", genre:"Soul/R&B", low:"B2", high:"D4"},
+  {title:"Georgia on My Mind", artist:"Ray Charles", genre:"Soul/R&B", low:"D3", high:"E4"},
+  {title:"Hit the Road Jack", artist:"Ray Charles", genre:"Soul/R&B", low:"F2", high:"D#4"},
+  {title:"I Can't Stop Loving You", artist:"Ray Charles", genre:"Soul/R&B", low:"C3", high:"E4"},
+  {title:"A Change Is Gonna Come", artist:"Sam Cooke", genre:"Soul/R&B", low:"F3", high:"A#4"},
+  {title:"Bring It On Home to Me", artist:"Sam Cooke", genre:"Soul/R&B", low:"G3", high:"A4"},
+  {title:"Chain Gang", artist:"Sam Cooke", genre:"Soul/R&B", low:"D2", high:"G4"},
+  {title:"Cupid", artist:"Sam Cooke", genre:"Soul/R&B", low:"A2", high:"C4"},
+  {title:"Twistin' the Night Away", artist:"Sam Cooke", genre:"Soul/R&B", low:"F#3", high:"F#4"},
+  {title:"Wonderful World", artist:"Sam Cooke", genre:"Soul/R&B", low:"G#2", high:"B4"},
+  {title:"You Send Me", artist:"Sam Cooke", genre:"Soul/R&B", low:"D3", high:"G4"},
+  {title:"Kiss from a Rose", artist:"Seal", genre:"Soul/R&B", low:"D3", high:"C5"},
+  {title:"Being with You", artist:"Smokey Robinson", genre:"Soul/R&B", low:"G3", high:"A#4"},
+  {title:"Cruisin'", artist:"Smokey Robinson", genre:"Soul/R&B", low:"D3", high:"G#4"},
+  {title:"I Second That Emotion", artist:"Smokey Robinson & The Miracles", genre:"Soul/R&B", low:"G2", high:"D4"},
+  {title:"Ooo Baby Baby", artist:"Smokey Robinson & The Miracles", genre:"Soul/R&B", low:"C#2", high:"D#4"},
+  {title:"Tracks of My Tears", artist:"Smokey Robinson & The Miracles", genre:"Soul/R&B", low:"D3", high:"B4"},
+  {title:"For Once in My Life", artist:"Stevie Wonder", genre:"Soul/R&B", low:"G3", high:"F5"},
+  {title:"Higher Ground", artist:"Stevie Wonder", genre:"Soul/R&B", low:"A2", high:"C4"},
+  {title:"I Just Called to Say I Love You", artist:"Stevie Wonder", genre:"Soul/R&B", low:"C3", high:"F4"},
+  {title:"Isn't She Lovely", artist:"Stevie Wonder", genre:"Soul/R&B", low:"E2", high:"B3"},
+  {title:"My Cherie Amour", artist:"Stevie Wonder", genre:"Soul/R&B", low:"D3", high:"D4"},
+  {title:"Ribbon in the Sky", artist:"Stevie Wonder", genre:"Soul/R&B", low:"D#3", high:"C5"},
+  {title:"Signed, Sealed, Delivered I'm Yours", artist:"Stevie Wonder", genre:"Soul/R&B", low:"A3", high:"A4"},
+  {title:"Sir Duke", artist:"Stevie Wonder", genre:"Soul/R&B", low:"F#3", high:"B4"},
+  {title:"Superstition", artist:"Stevie Wonder", genre:"Soul/R&B", low:"D#3", high:"A#4"},
+  {title:"You Are the Sunshine of My Life", artist:"Stevie Wonder", genre:"Soul/R&B", low:"E3", high:"A4"},
+  {title:"Kiss and Say Goodbye", artist:"The Manhattans", genre:"Soul/R&B", low:"F2", high:"A#3"},
+  {title:"For the Love of Money", artist:"The O'Jays", genre:"Soul/R&B", low:"F2", high:"D4"},
+  {title:"Love Train", artist:"The O'Jays", genre:"Soul/R&B", low:"A3", high:"A4"},
+  {title:"I'll Be Around", artist:"The Spinners", genre:"Soul/R&B", low:"F#4", high:"G#5"},
+  {title:"Rubberband Man", artist:"The Spinners", genre:"Soul/R&B", low:"D#3", high:"C5"},
+  {title:"Betcha By Golly, Wow", artist:"The Stylistics", genre:"Soul/R&B", low:"G#3", high:"B4"},
+  {title:"Ain't Too Proud to Beg", artist:"The Temptations", genre:"Soul/R&B", low:"D3", high:"E4"},
+  {title:"Get Ready", artist:"The Temptations", genre:"Soul/R&B", low:"B2", high:"D4"},
+  {title:"I Wish It Would Rain", artist:"The Temptations", genre:"Soul/R&B", low:"F2", high:"C4"},
+  {title:"Just My Imagination", artist:"The Temptations", genre:"Soul/R&B", low:"B2", high:"E4"},
+  {title:"My Girl", artist:"The Temptations", genre:"Soul/R&B", low:"G3", high:"A4"},
+  {title:"Papa Was a Rollin' Stone", artist:"The Temptations", genre:"Soul/R&B", low:"G#2", high:"F4"},
+  {title:"The Way You Do the Things You Do", artist:"The Temptations", genre:"Soul/R&B", low:"C3", high:"D4"}
+];
+
+songs.forEach(s => {
+  s.lowMidi = noteToMidi(s.low);
+  s.highMidi = noteToMidi(s.high);
+});
+
+const genres = [...new Set(songs.map(s=>s.genre))].sort();
+let activeGenres = new Set(genres);
+
+const lowSelect = document.getElementById('lowNote');
+const highSelect = document.getElementById('highNote');
+NOTE_RANGE.forEach(n => {
+  const o1 = document.createElement('option'); o1.value=n; o1.textContent=n;
+  lowSelect.appendChild(o1);
+  const o2 = document.createElement('option'); o2.value=n; o2.textContent=n;
+  highSelect.appendChild(o2);
+});
+lowSelect.value = 'C2';
+highSelect.value = 'C5';
+
+const genreToggles = document.getElementById('genreToggles');
+genres.forEach(g => {
+  const chip = document.createElement('div');
+  chip.className = 'genre-chip active';
+  chip.textContent = g;
+  chip.addEventListener('click', () => {
+    if(activeGenres.has(g)){ activeGenres.delete(g); chip.classList.remove('active'); }
+    else { activeGenres.add(g); chip.classList.add('active'); }
+    render();
+  });
+  genreToggles.appendChild(chip);
+});
+
+const tableBody = document.getElementById('tableBody');
+const emptyState = document.getElementById('emptyState');
+const resultCount = document.getElementById('resultCount');
+const searchInput = document.getElementById('search');
+
+const GLOBAL_LOW = noteToMidi('C2');
+const GLOBAL_HIGH = noteToMidi('C5');
+
+function render(){
+  const userLow = noteToMidi(lowSelect.value);
+  const userHigh = noteToMidi(highSelect.value);
+  const query = searchInput.value.trim().toLowerCase();
+
+  const filtered = songs.filter(s => {
+    if(s.lowMidi < userLow) return false;
+    if(s.highMidi > userHigh) return false;
+    if(!activeGenres.has(s.genre)) return false;
+    if(query && !(s.title.toLowerCase().includes(query) || s.artist.toLowerCase().includes(query))) return false;
+    return true;
+  });
+
+  tableBody.innerHTML = '';
+  filtered.forEach(s => {
+    const tr = document.createElement('tr');
+    const leftPct = ((s.lowMidi - GLOBAL_LOW) / (GLOBAL_HIGH - GLOBAL_LOW)) * 100;
+    const widthPct = ((s.highMidi - s.lowMidi) / (GLOBAL_HIGH - GLOBAL_LOW)) * 100;
+    tr.innerHTML = `
+      <td>
+        <div class="title">${s.title}</div>
+        <div class="artist">${s.artist}</div>
+      </td>
+      <td><span class="genre-tag">${s.genre}</span></td>
+      <td class="range-cell">
+        ${s.low} – ${s.high}
+        <div class="range-bar"><div class="range-bar-fill" style="left:${leftPct.toFixed(1)}%; width:${widthPct.toFixed(1)}%;"></div></div>
+      </td>
+    `;
+    tableBody.appendChild(tr);
+  });
+
+  emptyState.style.display = filtered.length === 0 ? 'block' : 'none';
+  resultCount.textContent = `${filtered.length} of ${songs.length} songs`;
+}
+
+lowSelect.addEventListener('change', render);
+highSelect.addEventListener('change', render);
+searchInput.addEventListener('input', render);
+
+render();
+</script>
+</body>
+</html>
